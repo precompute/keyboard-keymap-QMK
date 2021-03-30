@@ -13,7 +13,7 @@
 // #define EE_HANDS
 
 #define USE_SERIAL_PD2
-#define ONESHOT_TAP_TOGGLE 3
+#define ONESHOT_TAP_TOGGLE 2 /* 3 */
 #define ONESHOT_TIMEOUT 6000
 /* Don't need these, copied them from another config. */
 /* #define TAPPING_FORCE_HOLD */

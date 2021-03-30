@@ -81,7 +81,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_0,
                            KC_DEL,
 
-                           KC_F1,
+                           LT(3, KC_F1),
                            KC_F2,
                            KC_F3,
                            KC_F4,
@@ -160,7 +160,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_NO,
                            KC_NO,
                            KC_NO,
-                           KC_NO,
+                           RESET,
 
                            KC_NO,
                            KC_NO,
