@@ -189,7 +189,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_TRNS,
                            KC_TRNS
                            ),
-/* workman */
+
   [4] = LAYOUT_split_3x6_3(KC_TAB,
                            KC_Q,
                            KC_W,
@@ -212,8 +212,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_M,
                            KC_N,
                            KC_E,
-                           KC_O,
                            KC_I,
+                           KC_O,
                            ALL_T(KC_QUOT),
 
                            KC_BSPC,
