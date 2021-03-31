@@ -47,12 +47,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            OSM(MOD_LSFT),
                            OSM(MOD_LCTL),
                            OSL(2)
-                           /* KC_LGUI, */
-                           /* FN_MO13, */
-                           /* KC_SPC, */
-                           /* KC_ENT, */
-                           /* FN_MO23, */
-                           /* KC_RALT */
                            ),
 
   [1] = LAYOUT_split_3x6_3(KC_TILD,
@@ -125,8 +119,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_DOWN,
                            KC_UP,
                            KC_RGHT,
-                           KC_MUTE,
-                           KC_MPLY,
+                           DF(4),
+                           DF(0),
 
                            KC_APP,
                            KC_LCBR,
@@ -194,5 +188,53 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_TRNS,
                            KC_TRNS,
                            KC_TRNS
+                           ),
+/* workman */
+  [4] = LAYOUT_split_3x6_3(KC_TAB,
+                           KC_Q,
+                           KC_D,
+                           KC_R,
+                           KC_W,
+                           KC_B,
+                           KC_J,
+                           KC_F,
+                           KC_U,
+                           KC_P,
+                           KC_SCLN,
+                           KC_ESC,
+
+                           KC_ENT,
+                           KC_A,
+                           KC_S,
+                           KC_H,
+                           KC_T,
+                           KC_G,
+                           KC_Y,
+                           KC_N,
+                           KC_E,
+                           KC_O,
+                           KC_I,
+                           ALL_T(KC_QUOT),
+
+                           KC_BSPC,
+                           KC_Z,
+                           KC_X,
+                           KC_M,
+                           KC_C,
+                           KC_V,
+                           KC_K,
+                           KC_L,
+                           KC_COMM,
+                           KC_DOT,
+                           KC_SLSH,
+                           LALT_T(KC_MINS),
+
+
+                           OSM(MOD_LGUI),
+                           OSL(1),
+                           KC_SPC,
+                           OSM(MOD_LSFT),
+                           OSM(MOD_LCTL),
+                           OSL(2)
                            ),
                            };
