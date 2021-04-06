@@ -25,9 +25,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_K,
                            KC_L,
                            KC_SCLN,
-                           ALL_T(KC_QUOT),
+                           LGUI_T(KC_QUOT),
 
-                           KC_BSPC,
+                           KC_DEL,
                            KC_Z,
                            KC_X,
                            KC_C,
@@ -41,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            LALT_T(KC_MINS),
 
 
-                           OSM(MOD_LGUI),
+                           KC_BSPC,
                            OSL(2),
                            KC_SPC,
                            OSM(MOD_LSFT),
@@ -73,9 +73,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_E,
                            KC_I,
                            KC_O,
-                           ALL_T(KC_QUOT),
+                           LGUI_T(KC_QUOT),
 
-                           KC_BSPC,
+                           KC_DEL,
                            KC_Z,
                            KC_X,
                            KC_C,
@@ -89,7 +89,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            LALT_T(KC_MINS),
 
 
-                           OSM(MOD_LGUI),
+                           KC_BSPC,
                            OSL(2),
                            KC_SPC,
                            OSM(MOD_LSFT),
@@ -108,9 +108,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_ASTR,
                            KC_BSLS,
                            KC_EQL,
-                           KC_NO,
-
                            KC_GRV,
+
+                           KC_ENT,
                            KC_1,
                            KC_2,
                            KC_3,
@@ -121,7 +121,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_8,
                            KC_9,
                            KC_0,
-                           KC_DEL,
+                           KC_DOT,
 
                            LT(4, KC_F1),
                            KC_F2,
