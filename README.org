@@ -1,0 +1,29 @@
+#+TITLE: QMK Keymaps
+
+This repo hosts keymaps for my crkbd (corne)
+
+https://github.com/foostan/crkbd/
+
+* default1
+
+The default keymap, but with features incompatible with my keyboard disabled.
+
+* viacustom
+
+Default keymap that supports VIA, but with features incompatible with my keyboard disabled.
+
+* custom
+
+My custom firmware.
+
+[21-04-08] Functional but not as good as I'd like it to be, under development.
+
+| Layer # | Hosting                        |
+|---------+--------------------------------|
+|       0 | Colemak-DH                     |
+|       1 | qwerty                         |
+|       2 | numbers and symbols            |
+|       3 | symbols, nav and misc          |
+|       4 | Reset, Colemak / qwerty switch |
+
+[[images/custom.png]]
