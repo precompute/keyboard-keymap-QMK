@@ -124,6 +124,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_DOT,
 
                            LT(4, KC_DEL),
+                           KC_UNDS,
                            KC_LCBR,
                            KC_LBRC,
                            KC_LPRN,
@@ -134,7 +135,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_RCBR,
                            KC_TILD,
                            KC_GRV,
-                           KC_UNDS,
 
                            KC_TRNS,
                            KC_TRNS,
@@ -167,8 +167,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_DOWN,
                            KC_UP,
                            KC_RGHT,
-                           KC_WH_U,
                            KC_WH_D,
+                           KC_WH_U,
 
                            KC_APP,
                            KC_F7,
