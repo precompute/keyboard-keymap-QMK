@@ -4,15 +4,15 @@ This repo hosts keymaps for my crkbd (corne)
 
 https://github.com/foostan/crkbd/
 
-* default1
+** default1
 
 The default keymap, but with features incompatible with my keyboard disabled.
 
-* viacustom
+** viacustom
 
 Default keymap that supports VIA, but with features incompatible with my keyboard disabled.
 
-* custom
+** custom
 
 My custom firmware.
 
@@ -27,3 +27,4 @@ My custom firmware.
 |       4 | Reset, Colemak / qwerty switch |
 
 [[images/custom.png]]
+[21-04-11]The image above is now outdated.
