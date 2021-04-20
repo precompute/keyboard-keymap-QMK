@@ -17,7 +17,8 @@
 #define ONESHOT_TIMEOUT 6000
 /* Don't need these, copied them from another config. */
 /* #define TAPPING_FORCE_HOLD */
-/* #define TAPPING_TERM 100 */
+#define TAPPING_TERM 150
+#define IGNORE_MOD_TAP_INTERRUPT
 
 /* #define MOUSEKEY_INTERVAL 5 */
 /* #define MOUSEKEY_DELAY 0 */
