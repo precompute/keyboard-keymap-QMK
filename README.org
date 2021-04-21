@@ -17,14 +17,15 @@ Default keymap that supports VIA, but with features incompatible with my keyboar
 My custom firmware.
 
 [21-04-08] Functional but not as good as I'd like it to be, under development.
+[21-04-22] Stable, might add macros.
 
 | Layer # | Hosting                        |
 |---------+--------------------------------|
 |       0 | Colemak-DH                     |
 |       1 | qwerty                         |
 |       2 | numbers and symbols            |
-|       3 | symbols, nav and misc          |
-|       4 | Reset, Colemak / qwerty switch |
+|       3 | fn, nav, mousekeys and misc    |
+|       4 | vim nav                        |
+|       5 | Reset, Colemak / qwerty switch |
 
 [[images/custom.png]]
-[21-04-11]The image above is now outdated.
