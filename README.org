@@ -14,7 +14,7 @@ Default keymap that supports VIA, but with features incompatible with my keyboar
 
 ** custom
 
-My custom firmware.
+My custom keymap.
 
 [21-04-08] Functional but not as good as I'd like it to be, under development.
 [21-04-22] Stable, might add macros.

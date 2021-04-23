@@ -1,4 +1,5 @@
 #include QMK_KEYBOARD_H
+#include "mymacros.h"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_split_3x6_3(KC_TAB,
@@ -239,7 +240,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            ),
 
   [5] = LAYOUT_split_3x6_3(KC_NO,
-                           KC_NO,
+                           QMKBEST,
                            KC_NO,
                            KC_NO,
                            KC_NO,
