@@ -7,7 +7,9 @@ enum custom_keycodes {
     VIMDOW_U,
     VIMDOW_R,
     VIMEDIT,
-    VIMEXEC
+    VIMEXEC,
+    VIMSPLIT_V,
+    VIMSPLIT_H
 };
 
 #endif // MYMACROS_H

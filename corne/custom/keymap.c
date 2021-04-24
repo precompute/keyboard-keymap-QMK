@@ -239,8 +239,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_TRNS
                            ),
 
-  [5] = LAYOUT_split_3x6_3(KC_NO,
-                           KC_NO,
+  [5] = LAYOUT_split_3x6_3(VIMSPLIT_H,
+                           VIMSPLIT_V,
                            KC_NO,
                            KC_NO,
                            KC_NO,
@@ -258,10 +258,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_NO,
                            KC_NO,
                            KC_NO,
-                           KC_H,
-                           KC_J,
-                           KC_K,
-                           KC_L,
+                           LGUI_T(KC_H),
+                           LGUI_T(KC_J),
+                           LGUI_T(KC_K),
+                           LGUI_T(KC_L),
                            KC_NO,
                            KC_NO,
 
@@ -280,7 +280,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                            KC_TRNS,
                            KC_TRNS,
-                           KC_TRNS,
+                           KC_TRNS, /* LGUI_T(KC_SPC), */
                            KC_TRNS,
                            KC_TRNS,
                            KC_TRNS
