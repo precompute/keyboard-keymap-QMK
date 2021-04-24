@@ -18,6 +18,7 @@ My custom keymap.
 
 [21-04-08] Functional but not as good as I'd like it to be, under development.
 [21-04-22] Stable, might add macros.
+[21-04-25] Vim+WM Macros
 
 | Layer # | Hosting                        |
 |---------+--------------------------------|
@@ -27,5 +28,8 @@ My custom keymap.
 |       3 | fn, nav, mousekeys and misc    |
 |       4 | vim nav                        |
 |       5 | Reset, Colemak / qwerty switch |
+|       6 | window manager shortcuts       |
 
 [[images/custom.png]]
+
+The image above hasnot been updated.

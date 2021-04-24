@@ -1,7 +1,10 @@
+/* -*- eval: (outshine-mode 1); -*- */
 #include QMK_KEYBOARD_H
 #include "mymacros.h"
 
+/* * Keymap */
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+/* ** Colemak-DH */
   [0] = LAYOUT_split_3x6_3(KC_TAB,
                            KC_Q,
                            KC_W,
@@ -12,7 +15,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_L,
                            KC_U,
                            KC_Y,
-                           KC_SCLN,
+                           LT(6, KC_SCLN),
                            KC_ESC,
 
                            KC_ENT,
@@ -50,6 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            OSL(3)
                            ),
 
+/* ** QWERTY */
   [1] = LAYOUT_split_3x6_3(KC_TAB,
                            KC_Q,
                            KC_W,
@@ -98,6 +102,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            OSL(3)
                            ),
 
+/* ** Numbers and Symbols */
   [2] = LAYOUT_split_3x6_3(KC_TRNS,
                            KC_EXLM,
                            KC_AT,
@@ -144,7 +149,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            MO(MOD_LALT),
                            KC_TRNS
                            ),
-
+/* ** Fn and Misc */
   [3] = LAYOUT_split_3x6_3(KC_PSCR,
                            KC_F1,
                            KC_F2,
@@ -191,7 +196,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_TRNS,
                            KC_TRNS
                            ),
-
+/* ** RESET */
   [4] = LAYOUT_split_3x6_3(RESET,
                            DF(1),
                            DF(0),
@@ -239,6 +244,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_TRNS
                            ),
 
+/* ** Vim */
   [5] = LAYOUT_split_3x6_3(VIMSPLIT_H,
                            VIMSPLIT_V,
                            KC_NO,
@@ -258,10 +264,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_NO,
                            KC_NO,
                            KC_NO,
-                           LGUI_T(KC_H),
-                           LGUI_T(KC_J),
-                           LGUI_T(KC_K),
-                           LGUI_T(KC_L),
+                           LGUI(KC_H),
+                           LGUI(KC_J),
+                           LGUI(KC_K),
+                           LGUI(KC_L),
                            KC_NO,
                            KC_NO,
 
@@ -286,4 +292,52 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_TRNS
                            ),
 
-                           };
+/* ** WM */
+  [6] = LAYOUT_split_3x6_3(WM_TILE_TL,
+                           WM_TILE_T,
+                           WM_TILE_TR,
+                           WM_MV_WSPC_P,
+                           WM_MV_WSPC_N,
+                           WM_MAX,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+
+                           WM_TILE_L,
+                           KC_NO,
+                           WM_TILE_R,
+                           WM_WSPC_P,
+                           WM_WSPC_N,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+
+                           WM_TILE_BL,
+                           WM_TILE_B,
+                           WM_TILE_BR,
+                           WM_MAX_H,
+                           WM_MAX_V,
+                           WM_MIN,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+
+                           KC_TRNS,
+                           KC_TRNS,
+                           KC_TRNS,
+                           KC_TRNS,
+                           KC_TRNS,
+                           KC_TRNS
+                           ),
+
+};

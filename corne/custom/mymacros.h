@@ -9,7 +9,24 @@ enum custom_keycodes {
     VIMEDIT,
     VIMEXEC,
     VIMSPLIT_V,
-    VIMSPLIT_H
+    VIMSPLIT_H,
+
+    WM_MAX,
+    WM_MIN,
+    WM_MAX_H,
+    WM_MAX_V,
+    WM_WSPC_N,
+    WM_WSPC_P,
+    WM_MV_WSPC_N,
+    WM_MV_WSPC_P,
+    WM_TILE_T,
+    WM_TILE_B,
+    WM_TILE_L,
+    WM_TILE_R,
+    WM_TILE_TL,
+    WM_TILE_TR,
+    WM_TILE_BL,
+    WM_TILE_BR
 };
 
 #endif // MYMACROS_H
