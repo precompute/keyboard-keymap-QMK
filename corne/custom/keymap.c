@@ -190,8 +190,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            MO(4),
 
                            KC_TRNS,
-                           MO(MOD_LSFT),
-                           MO(MOD_LCTL),
+                           KC_LCTL,
+                           KC_LSFT,
                            KC_TRNS,
                            KC_TRNS,
                            KC_TRNS
