@@ -1,6 +1,7 @@
 /* -*- eval: (outshine-mode 1); -*- */
 #include QMK_KEYBOARD_H
 #include "mymacros.h"
+#include "tapdances.h"
 
 /* * Keymap */
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -39,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            LT(5, KC_V),
                            KC_K,
                            KC_H,
-                           KC_COMM,
+                           TD(LEFTBR_ARROW), /* KC_COMM, */
                            KC_DOT,
                            RGUI_T(KC_SLSH),
                            LALT_T(KC_MINS),

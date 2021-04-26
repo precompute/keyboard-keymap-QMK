@@ -8,7 +8,7 @@
 #   change to "no" to disable the options, or define them in the Makefile in
 #   the appropriate keymap folder that will get included automatically
 #
-SRC+= mymacros.c
+SRC+= mymacros.c tapdances.c
 
 # ** Enabled
 CFLAGS += -flto
@@ -17,6 +17,7 @@ EXTRAKEY_ENABLE = yes    # Audio control and System control(+450)
 LTO_ENABLE = yes         # This enables Link Time Optimization.This can save a good chunk of space(several KB for me), but the macro and function... functions cause it to error out.
 MOUSEKEY_ENABLE = yes    # Mouse keys
 NKRO_ENABLE = yes        # Nkey Rollover - if this doesn't work, see here: https://github.com/tmk/tmk_keyboard/wiki/FAQ#nkro-doesnt-work
+TAP_DANCE_ENABLE = yes
 # SPLIT_KEYBOARD = yes
 # SPLIT_TRANSPORT = mirror # for when Split Mirroring drops, it will maintain mirroring functionality
 
