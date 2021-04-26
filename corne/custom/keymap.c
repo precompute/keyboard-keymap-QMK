@@ -40,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            LT(5, KC_V),
                            KC_K,
                            KC_H,
-                           TD(LEFTBR_ARROW), /* KC_COMM, */
+                           KC_COMM,
                            KC_DOT,
                            RGUI_T(KC_SLSH),
                            LALT_T(KC_MINS),
@@ -134,10 +134,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_UNDS,
                            KC_LCBR,
                            KC_LBRC,
-                           KC_LPRN,
+                           TD(LPRN_ARROW), /* KC_LPRN, */
                            KC_PLUS,
                            KC_PIPE,
-                           KC_RPRN,
+                           TD(RPRN_ARROW), /* KC_RPRN, */
                            KC_RBRC,
                            KC_RCBR,
                            KC_TILD,
@@ -211,7 +211,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_NO,
                            RESET,
 
-                           KC_NO,
+                           KC_CAPS,
                            KC_NO,
                            KC_NO,
                            KC_NO,

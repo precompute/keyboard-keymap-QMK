@@ -15,8 +15,8 @@ typedef struct {
 } td_tap_t;
 
 enum {
-  LEFTBR_ARROW, // Our custom tap dance key; add any other tap dance keys to this enum
-  RIGHTBR_ARROW,
+  LPRN_ARROW, // Our custom tap dance key; add any other tap dance keys to this enum
+  RPRN_ARROW,
 };
 
 // Declare the functions to be used with your tap dance key(s)
