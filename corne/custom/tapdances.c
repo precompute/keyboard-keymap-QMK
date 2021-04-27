@@ -35,8 +35,8 @@ void ql_reset(qk_tap_dance_state_t *state, void *user_data) {
  /*     puts(buf); */
  /* } */
 
-/* void tapcode_SS(qk_tap_dance_state_t *state, void *user_data, uint16_t mykeycode, const char* mystring) { */
-void tapcode_SS(uint16_t mykeycode, const char* mystring, qk_tap_dance_state_t *state, void *user_data) {
+void tapcode_SS(qk_tap_dance_state_t *state, void *user_data, uint16_t mykeycode, const char* mystring) {
+/* void tapcode_SS(uint16_t mykeycode, const char* mystring, qk_tap_dance_state_t *state, void *user_data) { */
   ql_tap_state.state = cur_dance(state);
   /* char myarr[] = *mystring; */
   /* const char *myarr = mystring; */
@@ -95,7 +95,7 @@ void rprn_arrow_finished(qk_tap_dance_state_t *state, void *user_data) {
 // Associate our tap dance key with its functionality
 qk_tap_dance_action_t tap_dance_actions[] = {
   /* [LPRN_ARROW] = ACTION_TAP_DANCE_FN_ADVANCED_TIME(NULL, lprn_arrow_finished, ql_reset, 120), */
-  [LPRN_ARROW] = ACTION_TAP_DANCE_FN_ADVANCED_TIME(NULL, tapcode_SS(KC_LPRN, "<-"), ql_reset, 120),
+  [LPRN_ARROW] = ACTION_TAP_DANCE_FN_ADVANCED_TIME(NULL, tapcode_SS(NULL, NULL, KC_LPRN, "<-"), ql_reset, 120),
   [RPRN_ARROW] = ACTION_TAP_DANCE_FN_ADVANCED_TIME(NULL, rprn_arrow_finished, ql_reset, 120)
 };
 
