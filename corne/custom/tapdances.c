@@ -1,10 +1,11 @@
 /* -*- eval: (outshine-mode 1); -*- */
 #include QMK_KEYBOARD_H
 #include "tapdances.h"
-#include <stdint.h>
+/* #include <stdint.h> */
 
-#include "progmem.h"
-#include "send_string_keycodes.h"
+/* #include "progmem.h" */
+/* #include <avr/pgmspace.h> */
+/* #include "send_string_keycodes.h" */
 
 /* * State and Reset */
 // Determine the current tap dance state
@@ -35,9 +36,14 @@ void td_kcss_f(qk_tap_dance_state_t *state, void* user_data) {
   td_kcss *data = (td_kcss*)user_data;
   /* if (data->held) { */
   if (state->pressed && timer_elapsed(state->timer) > data->mytime) {
-    data->held = false;
+    /* data->held = false; */
     /* SEND_STRING(data->mystring); */
-    send_string_P(data->mystring);
+    const char *mystr = data->mystring;
+    /* SEND_STRING(mystr); */
+    send_string(mystr);
+    /* send_string_P(mystr); */
+    /* send_string_P(PSTR(mystr)); */
+    /* send_string_P(data->mystring); */
   } else {
     tap_code16(data->keycode);
   }

@@ -31,9 +31,9 @@ void ql_reset(qk_tap_dance_state_t *state, void *user_data);
 void tap_release(qk_tap_dance_state_t* state, void* user_data);
 typedef struct {
   uint16_t keycode;
-  char* mystring;
+  const char* mystring;
   uint16_t mytime;
-  bool held;
+  /* bool held; */
 } td_kcss;
 void td_kcss_f(qk_tap_dance_state_t *state, void *user_data);
 void td_kcss_r(qk_tap_dance_state_t *state, void *user_data);
