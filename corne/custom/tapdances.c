@@ -22,6 +22,7 @@ void ql_reset(qk_tap_dance_state_t *state, void *user_data) {
   ql_tap_state.state = TD_NONE;
 }
 
+/* ** Keycode + Send String */
 void td_kcss_f(qk_tap_dance_state_t *state, void* user_data) {
   td_kcss *data = (td_kcss*)user_data;
   if (state->pressed && timer_elapsed(state->timer) > data->mytime) {
@@ -33,6 +34,20 @@ void td_kcss_f(qk_tap_dance_state_t *state, void* user_data) {
 }
 
 void td_kcss_r(qk_tap_dance_state_t *state, void* user_data) {
+  ql_tap_state.state = TD_NONE;
+}
+
+/* ** Keycode + Keycode */
+void td_kckc_f(qk_tap_dance_state_t *state, void* user_data) {
+  td_kckc *data = (td_kckc*)user_data;
+  if (state->pressed && timer_elapsed(state->timer) > data->mytime) {
+    tap_code16(data->keycode2);
+  } else {
+    tap_code16(data->keycode1);
+  }
+}
+
+void td_kckc_r(qk_tap_dance_state_t *state, void* user_data) {
   ql_tap_state.state = TD_NONE;
 }
 
@@ -56,3 +71,5 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 /* volume tap hold = repeat 3xx */
 /* sym layer space = sentence end .spacespaceCAPITAL shift on hold */
 /* comma space for the key next to it */
+/* vsplit/c.rotate */
+/* hsplit/cc.rotate */

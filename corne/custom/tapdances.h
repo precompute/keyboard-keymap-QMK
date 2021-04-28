@@ -39,4 +39,16 @@ void td_kcss_r(qk_tap_dance_state_t *state, void *user_data);
   .fn = {NULL, td_kcss_f, td_kcss_r}, \
   .user_data = (void*)&((td_kcss){.keycode=_keycode, .mystring=_mystring, .mytime=_mytime,}) \
 }
+
+typedef struct {
+  uint16_t keycode1;
+  uint16_t keycode2;
+  uint16_t mytime;
+} td_kckc;
+void td_kckc_f(qk_tap_dance_state_t *state, void *user_data);
+void td_kckc_r(qk_tap_dance_state_t *state, void *user_data);
+#define TAP_DANCE_KCKC(_keycode1, _keycode2, _mytime) { \
+  .fn = {NULL, td_kckc_f, td_kckc_r}, \
+  .user_data = (void*)&((td_kckc){.keycode1=_keycode1, .keycode2=_keycode2, .mytime=_mytime,}) \
+}
 #endif // TAPDANCES_H
