@@ -270,7 +270,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            LGUI(KC_K),
                            LGUI(KC_L),
                            KC_NO,
-                           KC_NO,
+                           TD(VIM_SR_SR_ALL),
 
                            KC_NO,
                            KC_NO,

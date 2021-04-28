@@ -76,10 +76,11 @@ qk_tap_dance_action_t tap_dance_actions[] = {
   [LPRN_ARROW] = TAP_DANCE_KCSS(KC_LPRN, "<-", 120),
 /* ** RPRN  ( <- */
   [LPRN_ARROW] = TAP_DANCE_KCSS(KC_RPRN, "->", 120),
+/* ** :%s/ :s/ */
+  [VIM_SR_SR_ALL] = TAP_DANCE_SSSS(":s/", SS_TAP(X_ESC)":%s/", 120),
 };
 
 /* * TODO */
-/* :s :%s */
 /* :mk */
 /* menu C-S-z */
 /* : =: */
