@@ -29,6 +29,18 @@ void ql_finished(qk_tap_dance_state_t *state, void *user_data);
 void ql_reset(qk_tap_dance_state_t *state, void *user_data);
 
 typedef struct {
+  const char* mystring1;
+  const char* mystring2;
+  uint16_t mytime;
+} td_ssss;
+void td_ssss_f(qk_tap_dance_state_t *state, void *user_data);
+void td_ssss_r(qk_tap_dance_state_t *state, void *user_data);
+#define TAP_DANCE_SSSS(_mystring1, _mystring2, _mytime) { \
+  .fn = {NULL, td_ssss_f, td_ssss_r}, \
+  .user_data = (void*)&((td_ssss){.mystring1=_mystring1, .mystring2=_mystring2, .mytime=_mytime,}) \
+}
+
+typedef struct {
   uint16_t keycode;
   const char* mystring;
   uint16_t mytime;

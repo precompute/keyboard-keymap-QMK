@@ -22,6 +22,22 @@ void ql_reset(qk_tap_dance_state_t *state, void *user_data) {
   ql_tap_state.state = TD_NONE;
 }
 
+/* ** Send String + Send String */
+void td_ssss_f(qk_tap_dance_state_t *state, void* user_data) {
+  td_ssss *data = (td_ssss*)user_data;
+  if (state->pressed && timer_elapsed(state->timer) > data->mytime) {
+    const char *mystr1 = data->mystring1;
+    send_string(mystr1);
+  } else {
+    const char *mystr2 = data->mystring2;
+    send_string(mystr2);
+  }
+}
+
+void td_ssss_r(qk_tap_dance_state_t *state, void* user_data) {
+  ql_tap_state.state = TD_NONE;
+}
+
 /* ** Keycode + Send String */
 void td_kcss_f(qk_tap_dance_state_t *state, void* user_data) {
   td_kcss *data = (td_kcss*)user_data;
