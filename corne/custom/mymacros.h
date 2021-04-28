@@ -10,6 +10,8 @@ enum custom_keycodes {
     VIMEXEC,
     VIMSPLIT_V,
     VIMSPLIT_H,
+    VIM_SR,
+    VIM_SR_ALL,
 
     WM_MAX,
     WM_MIN,

@@ -17,6 +17,7 @@ typedef struct {
 enum {
   LPRN_ARROW, // Our custom tap dance key; add any other tap dance keys to this enum
   RPRN_ARROW,
+  VIM_SR_SR_ALL,
 };
 
 // Declare the functions to be used with your tap dance key(s)
@@ -27,6 +28,9 @@ td_state_t cur_dance(qk_tap_dance_state_t *state);
 // Functions associated with individual tap dances
 void ql_finished(qk_tap_dance_state_t *state, void *user_data);
 void ql_reset(qk_tap_dance_state_t *state, void *user_data);
+
+void wrap_VIM_SR(void);
+void wrap_VIM_SR_ALL(void);
 
 typedef struct {
   uint16_t keycode;

@@ -52,6 +52,16 @@ void td_kckc_r(qk_tap_dance_state_t *state, void* user_data) {
 }
 
 /* * Definitions */
+/* * Custom Keycode wrappers */
+void wrap_VIM_SR() {
+  /* tap_code16(VIM_SR); */
+  register_code16(VIM_SR);
+}
+
+void wrap_VIM_SR_ALL() {
+  /* tap_code16(VIM_SR_ALL); */
+  register_code16(VIM_SR_ALL);
+}
 
 /* * TD Enum */
 // Associate our tap dance key with its functionality
@@ -60,6 +70,8 @@ qk_tap_dance_action_t tap_dance_actions[] = {
   [LPRN_ARROW] = TAP_DANCE_KCSS(KC_LPRN, "<-", 120),
 /* ** RPRN  ( <- */
   [LPRN_ARROW] = TAP_DANCE_KCSS(KC_RPRN, "->", 120),
+/* ** VIM_SR  :%s/ */
+  [VIM_SR_SR_ALL] = ACTION_TAP_DANCE_FN_ADVANCED_TIME(NULL, wrap_VIM_SR, wrap_VIM_SR_ALL, 120),
 };
 
 /* * TODO */

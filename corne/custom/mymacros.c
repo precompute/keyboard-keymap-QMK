@@ -49,6 +49,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             SEND_STRING(SS_LCTL("wv"));
         return false;
         break;
+/* ** Search Replace */
+    case VIM_SR:
+        if (record->event.pressed)
+            SEND_STRING(SS_TAP(X_ESC)":s/");
+        return false;
+        break;
+    case VIM_SR_ALL:
+        if (record->event.pressed)
+            SEND_STRING(SS_TAP(X_ESC)":%s/");
+        return false;
+        break;
 /* * Window Manager */
 /* ** Size */
     case WM_MAX:
