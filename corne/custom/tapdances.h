@@ -28,12 +28,10 @@ td_state_t cur_dance(qk_tap_dance_state_t *state);
 void ql_finished(qk_tap_dance_state_t *state, void *user_data);
 void ql_reset(qk_tap_dance_state_t *state, void *user_data);
 
-void tap_release(qk_tap_dance_state_t* state, void* user_data);
 typedef struct {
   uint16_t keycode;
   const char* mystring;
   uint16_t mytime;
-  /* bool held; */
 } td_kcss;
 void td_kcss_f(qk_tap_dance_state_t *state, void *user_data);
 void td_kcss_r(qk_tap_dance_state_t *state, void *user_data);
@@ -41,8 +39,4 @@ void td_kcss_r(qk_tap_dance_state_t *state, void *user_data);
   .fn = {NULL, td_kcss_f, td_kcss_r}, \
   .user_data = (void*)&((td_kcss){.keycode=_keycode, .mystring=_mystring, .mytime=_mytime,}) \
 }
-
-
-
-
 #endif // TAPDANCES_H
