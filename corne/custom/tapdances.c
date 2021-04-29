@@ -53,20 +53,20 @@ void td_kcss_r(qk_tap_dance_state_t *state, void* user_data) {
   ql_tap_state.state = TD_NONE;
 }
 
-/* ** Send String + Keycode */
-void td_sskc_f(qk_tap_dance_state_t *state, void* user_data) {
-  td_sskc *data = (td_sskc*)user_data;
-  if (state->pressed && timer_elapsed(state->timer) > data->mytime) {
-    tap_code16(data->keycode);
-  } else {
-    const char *mystr = data->mystring;
-    send_string(mystr);
-  }
-}
+/* /\* ** Send String + Keycode *\/ */
+/* void td_sskc_f(qk_tap_dance_state_t *state, void* user_data) { */
+/*   td_sskc *data = (td_sskc*)user_data; */
+/*   if (state->pressed && timer_elapsed(state->timer) > data->mytime) { */
+/*     tap_code16(data->keycode); */
+/*   } else { */
+/*     const char *mystr = data->mystring; */
+/*     send_string(mystr); */
+/*   } */
+/* } */
 
-void td_sskc_r(qk_tap_dance_state_t *state, void* user_data) {
-  ql_tap_state.state = TD_NONE;
-}
+/* void td_sskc_r(qk_tap_dance_state_t *state, void* user_data) { */
+/*   ql_tap_state.state = TD_NONE; */
+/* } */
 
 /* ** Keycode + Keycode */
 void td_kckc_f(qk_tap_dance_state_t *state, void* user_data) {
@@ -103,7 +103,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 /* *** Menu Terminal */
   [MENU_TERM] = TAP_DANCE_KCSS(KC_APP, SS_LSFT(SS_LCTL("z")), 120),
 /* *** Shift Sentence End */
-  [SFT_END_SENT] = TAP_DANCE_SSKC(".  ", KC_LSFT, 120),
+  /* [SFT_END_SENT] = TAP_DANCE_SSKC(".  ", KC_LSFT, 120), */
 };
 
 /* * TODO */

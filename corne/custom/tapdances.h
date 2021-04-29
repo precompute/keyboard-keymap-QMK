@@ -57,17 +57,17 @@ void td_kcss_r(qk_tap_dance_state_t *state, void *user_data);
   .user_data = (void*)&((td_kcss){.keycode=_keycode, .mystring=_mystring, .mytime=_mytime,}) \
 }
 
-typedef struct {
-  const char* mystring;
-  uint16_t keycode;
-  uint16_t mytime;
-} td_sskc;
-void td_sskc_f(qk_tap_dance_state_t *state, void *user_data);
-void td_sskc_r(qk_tap_dance_state_t *state, void *user_data);
-#define TAP_DANCE_SSKC(_mystring, _keycode, _mytime) { \
-  .fn = {NULL, td_sskc_f, td_sskc_r}, \
-  .user_data = (void*)&((td_sskc){.mystring=_mystring, .keycode=_keycode, .mytime=_mytime,}) \
-}
+/* typedef struct { */
+/*   const char* mystring; */
+/*   uint16_t keycode; */
+/*   uint16_t mytime; */
+/* } td_sskc; */
+/* void td_sskc_f(qk_tap_dance_state_t *state, void *user_data); */
+/* void td_sskc_r(qk_tap_dance_state_t *state, void *user_data); */
+/* #define TAP_DANCE_SSKC(_mystring, _keycode, _mytime) { \ */
+/*   .fn = {NULL, td_sskc_f, td_sskc_r}, \ */
+/*   .user_data = (void*)&((td_sskc){.mystring=_mystring, .keycode=_keycode, .mytime=_mytime,}) \ */
+/* } */
 
 typedef struct {
   uint16_t keycode1;
