@@ -72,11 +72,13 @@ void td_kckc_r(qk_tap_dance_state_t *state, void* user_data) {
 /* * TD Enum */
 // Associate our tap dance key with its functionality
 qk_tap_dance_action_t tap_dance_actions[] = {
-/* ** LPRN  ) -> */
+/* ** General */
+/* *** LPRN  ) -> */
   [LPRN_ARROW] = TAP_DANCE_KCSS(KC_LPRN, "<-", 120),
-/* ** RPRN  ( <- */
-  [LPRN_ARROW] = TAP_DANCE_KCSS(KC_RPRN, "->", 120),
-/* ** :%s/ :s/ */
+/* *** RPRN  ( <- */
+  [RPRN_ARROW] = TAP_DANCE_KCSS(KC_RPRN, "->", 120),
+/* ** Vim */
+/* *** :%s/ :s/ */
   [VIM_SR_SR_ALL] = TAP_DANCE_SSSS(":s/", SS_TAP(X_ESC)":%s/", 120),
 };
 
