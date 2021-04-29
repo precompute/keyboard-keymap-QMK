@@ -18,6 +18,8 @@ enum {
   LPRN_ARROW, // Our custom tap dance key; add any other tap dance keys to this enum
   RPRN_ARROW,
   VIM_SR_SR_ALL,
+  MENU_TERM,
+  EQL_EQLCOL,
 };
 
 // Declare the functions to be used with your tap dance key(s)

@@ -77,15 +77,18 @@ qk_tap_dance_action_t tap_dance_actions[] = {
   [LPRN_ARROW] = TAP_DANCE_KCSS(KC_LPRN, "<-", 120),
 /* *** RPRN  ( <- */
   [RPRN_ARROW] = TAP_DANCE_KCSS(KC_RPRN, "->", 120),
+/* *** = =: */
+  [EQL_EQLCOL] = TAP_DANCE_KCSS(KC_EQL, "=:", 120),
 /* ** Vim */
 /* *** :%s/ :s/ */
   [VIM_SR_SR_ALL] = TAP_DANCE_SSSS(":s/", SS_TAP(X_ESC)":%s/", 120),
+/* ** Other Shortcuts */
+/* *** Menu Terminal */
+  [MENU_TERM] = TAP_DANCE_KCSS(KC_APP, SS_LCTL(SS_LSFT(z)), 120),
 };
 
 /* * TODO */
 /* :mk */
-/* menu C-S-z */
-/* : =: */
 /* C-A-c C-A-y */
 /* volume tap hold = repeat 3xx */
 /* sym layer space = sentence end .spacespaceCAPITAL shift on hold */
