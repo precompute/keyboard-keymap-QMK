@@ -2,6 +2,9 @@
 #include QMK_KEYBOARD_H
 #include "mymacros.h"
 
+bool is_rgui_tab_active = false;
+uint16_t rgui_tab_timer = 0;
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
 /* * Vim Window Movement */
@@ -133,6 +136,31 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             tap_code16(LCTL(LGUI(KC_DOWN)));
         return false;
         break;
+/* ** Super-Tab */
+/* adapted from */
+/* https://beta.docs.qmk.fm/using-qmk/advanced-keycodes/feature_macros#super-alt-tab */
+    case RGUI_TAB:
+      if (record->event.pressed) {
+        if (!is_rgui_tab_active) {
+          is_rgui_tab_active = true;
+          register_code(KC_RGUI);
+        }
+        rgui_tab_timer = timer_read();
+        register_code(KC_TAB);
+      } else {
+        unregister_code(KC_TAB);
+      }
+      break;
     }
     return true;
 };
+
+/* ** Super-Tab matrix scan */
+void matrix_scan_user(void) {
+  if (is_rgui_tab_active) {
+    if (timer_elapsed(rgui_tab_timer) > 350) {
+      unregister_code(KC_RGUI);
+      is_rgui_tab_active = false;
+    }
+  }
+}

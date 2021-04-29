@@ -26,7 +26,9 @@ enum custom_keycodes {
     WM_TILE_TL,
     WM_TILE_TR,
     WM_TILE_BL,
-    WM_TILE_BR
+    WM_TILE_BR,
+
+    RGUI_TAB
 };
 
 #endif // MYMACROS_H
