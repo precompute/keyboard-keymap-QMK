@@ -18,9 +18,40 @@ static td_tap_t ql_tap_state = {
   .state = TD_NONE
 };
 
+void ql_finished(qk_tap_dance_state_t *state, void *user_data) {
+  ql_tap_state.state = cur_dance(state);
+  switch (ql_tap_state.state) {
+  case TD_SINGLE_TAP:
+    SEND_STRING(".  ");
+    set_oneshot_mods(MOD_LSFT | get_oneshot_mods());
+    break;
+  case TD_SINGLE_HOLD:
+    register_code(KC_LSFT);
+    break;
+  case TD_NONE:
+    break;
+  }
+}
+
 void ql_reset(qk_tap_dance_state_t *state, void *user_data) {
+  switch (ql_tap_state.state) {
+    /* case TD_SINGLE_TAP: */
+    /*   unregister_code(KC_X); */
+    /*   break; */
+  case TD_SINGLE_TAP:
+    break;
+  case TD_SINGLE_HOLD:
+    unregister_code(KC_LSFT);
+    break;
+  case TD_NONE:
+    break;
+  }
   ql_tap_state.state = TD_NONE;
 }
+
+/* void ql_reset(qk_tap_dance_state_t *state, void *user_data) { */
+/*   ql_tap_state.state = TD_NONE; */
+/* } */
 
 /* ** Send String + Send String */
 void td_ssss_f(qk_tap_dance_state_t *state, void* user_data) {
@@ -103,7 +134,10 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 /* *** Menu Terminal */
   [MENU_TERM] = TAP_DANCE_KCSS(KC_APP, SS_LSFT(SS_LCTL("z")), 120),
 /* *** Shift Sentence End */
+/* Adapted from sevanteri QMK config */
+/* https://github.com/sevanteri/qmk_firmware/blob/7d59eeff4ddbc09758412ed74ad22a0062312388/users/sevanteri/tap_dance_config.c */
   /* [SFT_END_SENT] = TAP_DANCE_SSKC(".  ", KC_LSFT, 120), */
+  [SFT_END_SENT] = ACTION_TAP_DANCE_FN_ADVANCED_TIME(NULL, ql_finished, ql_reset, 120),
 };
 
 /* * TODO */
@@ -116,3 +150,5 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 /* comma space for the key next to it */
 /* vsplit/c.rotate */
 /* hsplit/cc.rotate */
+/* vim move / resize */
+/* delete all frames except current */

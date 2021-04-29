@@ -192,7 +192,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                            KC_TRNS,
                            KC_LCTL,
-                           KC_LSFT,
+                           /* LSFT_T(send_string(".  ")), */
+                           TD(SFT_END_SENT), /* KC_LSFT, */
                            KC_TRNS,
                            KC_TRNS,
                            KC_TRNS
