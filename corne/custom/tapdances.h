@@ -21,6 +21,7 @@ enum {
   MENU_TERM,
   EQL_EQLCOL,
   GRASP_CAP_NOTE,
+  SFT_END_SENT,
 };
 
 // Declare the functions to be used with your tap dance key(s)
