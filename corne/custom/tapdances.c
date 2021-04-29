@@ -26,11 +26,11 @@ void ql_reset(qk_tap_dance_state_t *state, void *user_data) {
 void td_ssss_f(qk_tap_dance_state_t *state, void* user_data) {
   td_ssss *data = (td_ssss*)user_data;
   if (state->pressed && timer_elapsed(state->timer) > data->mytime) {
-    const char *mystr1 = data->mystring1;
-    send_string(mystr1);
-  } else {
     const char *mystr2 = data->mystring2;
     send_string(mystr2);
+  } else {
+    const char *mystr1 = data->mystring1;
+    send_string(mystr1);
   }
 }
 
@@ -81,7 +81,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
   [EQL_EQLCOL] = TAP_DANCE_KCSS(KC_EQL, "=:", 120),
 /* ** Vim */
 /* *** :%s/ :s/ */
-  [VIM_SR_SR_ALL] = TAP_DANCE_SSSS(":s/", SS_TAP(X_ESC)":%s/", 120),
+  [VIM_SR_SR_ALL] = TAP_DANCE_SSSS(SS_TAP(X_ESC)":%s/", ":s/", 120),
 /* ** Other Shortcuts */
 /* *** Menu Terminal */
   [MENU_TERM] = TAP_DANCE_KCSS(KC_APP, SS_LCTL(SS_LSFT(z)), 120),
