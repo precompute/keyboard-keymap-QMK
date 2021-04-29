@@ -114,7 +114,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_AMPR,
                            KC_ASTR,
                            KC_BSLS,
-                           KC_EQL,
+                           TD(EQL_EQLCOL), /* KC_EQL, */
                            KC_TRNS,
 
                            KC_ENT,
@@ -177,7 +177,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_WH_D,
                            KC_WH_U,
 
-                           KC_APP,
+                           TD(MENU_TERM), /* KC_APP, */
                            KC_F7,
                            KC_F8,
                            KC_F9,
@@ -293,14 +293,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_TRNS
                            ),
 
-/* ** WM */
+/* ** WM and Misc */
   [6] = LAYOUT_split_3x6_3(WM_TILE_TL,
                            WM_TILE_T,
                            WM_TILE_TR,
                            WM_MV_WSPC_P,
                            WM_MV_WSPC_N,
                            WM_MAX,
-                           KC_NO,
+                           TD(GRASP_CAP_NOTE),
                            KC_NO,
                            KC_NO,
                            KC_NO,

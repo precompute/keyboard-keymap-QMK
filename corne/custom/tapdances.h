@@ -20,6 +20,7 @@ enum {
   VIM_SR_SR_ALL,
   MENU_TERM,
   EQL_EQLCOL,
+  GRASP_CAP_NOTE,
 };
 
 // Declare the functions to be used with your tap dance key(s)

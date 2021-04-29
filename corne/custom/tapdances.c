@@ -70,6 +70,8 @@ void td_kckc_r(qk_tap_dance_state_t *state, void* user_data) {
 /* * Definitions */
 
 /* * TD Enum */
+/* uint16_t* CS_z = SS_LCTL(SS_LSFT(z)); */
+/* char* CS_z = "SS_LCTL(SS_LSFT(z))"; */
 // Associate our tap dance key with its functionality
 qk_tap_dance_action_t tap_dance_actions[] = {
 /* ** General */
@@ -79,17 +81,22 @@ qk_tap_dance_action_t tap_dance_actions[] = {
   [RPRN_ARROW] = TAP_DANCE_KCSS(KC_RPRN, "->", 120),
 /* *** = =: */
   [EQL_EQLCOL] = TAP_DANCE_KCSS(KC_EQL, "=:", 120),
+/* *** Grasp capture / note */
+  [GRASP_CAP_NOTE] = TAP_DANCE_SSSS(SS_LCTL(SS_LALT("c")), SS_LCTL(SS_LALT("y")), 120),
 /* ** Vim */
 /* *** :%s/ :s/ */
   [VIM_SR_SR_ALL] = TAP_DANCE_SSSS(SS_TAP(X_ESC)":%s/", ":s/", 120),
 /* ** Other Shortcuts */
 /* *** Menu Terminal */
-  [MENU_TERM] = TAP_DANCE_KCSS(KC_APP, SS_LCTL(SS_LSFT(z)), 120),
+  [MENU_TERM] = TAP_DANCE_KCSS(KC_APP, SS_LSFT(SS_LCTL("z")), 120),
 };
 
 /* * TODO */
 /* :mk */
 /* C-A-c C-A-y */
+/* C-ss C-s C-s */
+/* SPC ff */
+/* SPC sd SPC sp */
 /* volume tap hold = repeat 3xx */
 /* sym layer space = sentence end .spacespaceCAPITAL shift on hold */
 /* comma space for the key next to it */
