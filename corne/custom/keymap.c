@@ -247,8 +247,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            ),
 
 /* ** Vim */
-  [5] = LAYOUT_split_3x6_3(VIMSPLIT_H_DEL_OTHER,
-                           VIMSPLIT_V_DEL_OTHER_V,
+  [5] = LAYOUT_split_3x6_3(TD(VIMSPLIT_H_DEL_OTHER),
+                           TD(VIMSPLIT_V_DEL_OTHER_V),
                            KC_NO,
                            KC_NO,
                            KC_NO,
@@ -273,10 +273,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_NO,
                            TD(VIM_SR_SR_ALL),
 
-                           SPC_SD_SP,
-                           EMACS_NMODE_CG,
-                           SPC_FF_FR,
-                           EMACS_SEARCH_ISEARCH,
+                           TD(SPC_SD_SP),
+                           TD(EMACS_NMODE_CG),
+                           TD(SPC_FF_FR),
+                           TD(EMACS_SEARCH_ISEARCH),
                            KC_NO,
                            KC_NO,
                            TD(VIMSIZE_H_CC_ROT),
