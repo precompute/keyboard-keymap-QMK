@@ -161,7 +161,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_PGDN,
                            KC_PGUP,
                            KC_END,
-                           KC_VOLU,
+                           TD(VOLU_3X),
                            KC_ESC,
 
                            KC_TRNS,
@@ -187,7 +187,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_MS_D,
                            KC_MS_U,
                            KC_MS_R,
-                           KC_VOLD,
+                           TD(VOLD_3X),
                            MO(4),
 
                            KC_TRNS,

@@ -143,6 +143,9 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 /* https://github.com/sevanteri/qmk_firmware/blob/7d59eeff4ddbc09758412ed74ad22a0062312388/users/sevanteri/tap_dance_config.c */
   /* [SFT_END_SENT] = TAP_DANCE_SSKC(".  ", KC_LSFT, 120), */
   [SFT_END_SENT] = ACTION_TAP_DANCE_FN_ADVANCED_TIME(NULL, ql_finished, ql_reset, 120),
+/* *** Volume */
+  [VOLD_3X] = TAP_DANCE_SSSS(SS_TAP(X_VOLD), SS_TAP(X_VOLD)SS_TAP(X_VOLD)SS_TAP(X_VOLD), 120),
+  [VOLU_3X] = TAP_DANCE_SSSS(SS_TAP(X_VOLU), SS_TAP(X_VOLU)SS_TAP(X_VOLU)SS_TAP(X_VOLU), 120),
 };
 
 /* * TODO */
@@ -150,7 +153,6 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 /* C-ss C-s C-s */
 /* SPC ff */
 /* SPC sd SPC sp */
-/* volume tap hold = repeat 3xx */
 /* comma space for the key next to it */
 /* vsplit/c.rotate */
 /* hsplit/cc.rotate */

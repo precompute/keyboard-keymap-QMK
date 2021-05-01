@@ -27,6 +27,9 @@ enum {
   VIMSIZE_J_FLIP,
   VIMSIZE_K_FLOP,
   VIMSIZE_L_C_ROT,
+
+  VOLD_3X,
+  VOLU_3X,
 };
 
 // Declare the functions to be used with your tap dance key(s)
