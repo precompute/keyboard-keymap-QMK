@@ -273,9 +273,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_NO,
                            TD(VIM_SR_SR_ALL),
 
+                           SPC_FF_FR,
                            KC_NO,
-                           KC_NO,
-                           KC_NO,
+                           SPC_SD_SP,
                            KC_NO,
                            KC_NO,
                            KC_NO,

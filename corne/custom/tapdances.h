@@ -33,6 +33,9 @@ enum {
 
   VOLD_3X,
   VOLU_3X,
+
+  SPC_FF_FR,
+  SPC_SD_SP,
 };
 
 // Declare the functions to be used with your tap dance key(s)

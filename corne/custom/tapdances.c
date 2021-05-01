@@ -138,6 +138,11 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 /* *** Split / Delete Other Windows */
   [VIMSPLIT_H_DEL_OTHER]   = TAP_DANCE_SSSS(SS_LCTL("ws"), SS_LGUI(SS_RGUI("'")), 120),
   [VIMSPLIT_V_DEL_OTHER_V] = TAP_DANCE_SSSS(SS_LCTL("wv"), SS_LGUI(SS_RGUI("v")), 120),
+/* ** Emacs */
+/* *** find file / find recent */
+  [SPC_FF_FR] = TAP_DANCE_SSSS(" ff", " fr", 120),
+/* *** search directory / search project */
+  [SPC_SD_SP] = TAP_DANCE_SSSS(" sd", " sp", 120),
 /* ** Other Shortcuts */
 /* *** Menu Terminal */
   [MENU_TERM] = TAP_DANCE_KCSS(KC_APP, SS_LSFT(SS_LCTL("z")), 120),
