@@ -36,6 +36,8 @@ enum {
 
   SPC_FF_FR,
   SPC_SD_SP,
+  EMACS_SEARCH_ISEARCH,
+  EMACS_NMODE_CG,
 };
 
 // Declare the functions to be used with your tap dance key(s)

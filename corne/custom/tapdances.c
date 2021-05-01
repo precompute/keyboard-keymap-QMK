@@ -143,6 +143,10 @@ qk_tap_dance_action_t tap_dance_actions[] = {
   [SPC_FF_FR] = TAP_DANCE_SSSS(" ff", " fr", 120),
 /* *** search directory / search project */
   [SPC_SD_SP] = TAP_DANCE_SSSS(" sd", " sp", 120),
+/* *** swiper search / isearch */
+  [EMACS_SEARCH_ISEARCH] = TAP_DANCE_SSSS(SS_LCTL("ss"), SS_LCTL("s")"s", 120),
+/* *** Normal Mode / C-g */
+  [EMACS_NMODE_CG] = TAP_DANCE_SSSS(SS_TAP(X_ESC), SS_LCTL("g"), 120),
 /* ** Other Shortcuts */
 /* *** Menu Terminal */
   [MENU_TERM] = TAP_DANCE_KCSS(KC_APP, SS_LSFT(SS_LCTL("z")), 120),
@@ -158,7 +162,4 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 
 /* * TODO */
 /* :mk */
-/* C-ss C-s C-s */
-/* SPC ff */
-/* SPC sd SPC sp */
 /* comma space for the key next to it */
