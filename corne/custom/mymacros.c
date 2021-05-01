@@ -42,16 +42,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         return false;
         break;
 /* ** Split */
-    case VIMSPLIT_H:
-        if (record->event.pressed)
-            SEND_STRING(SS_LCTL("ws"));
-        return false;
-        break;
-    case VIMSPLIT_V:
-        if (record->event.pressed)
-            SEND_STRING(SS_LCTL("wv"));
-        return false;
-        break;
+    /* case VIMSPLIT_H: */
+    /*     if (record->event.pressed) */
+    /*         SEND_STRING(SS_LCTL("ws")); */
+    /*     return false; */
+    /*     break; */
+    /* case VIMSPLIT_V: */
+    /*     if (record->event.pressed) */
+    /*         SEND_STRING(SS_LCTL("wv")); */
+    /*     return false; */
+    /*     break; */
 /* * Window Manager */
 /* ** Size */
     case WM_MAX:

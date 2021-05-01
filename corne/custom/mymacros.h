@@ -8,8 +8,8 @@ enum custom_keycodes {
     VIMDOW_R,
     VIMEDIT,
     VIMEXEC,
-    VIMSPLIT_V,
-    VIMSPLIT_H,
+    /* VIMSPLIT_V, */
+    /* VIMSPLIT_H, */
 
     WM_MAX,
     WM_MIN,

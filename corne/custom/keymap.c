@@ -247,8 +247,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            ),
 
 /* ** Vim */
-  [5] = LAYOUT_split_3x6_3(VIMSPLIT_H,
-                           VIMSPLIT_V,
+  [5] = LAYOUT_split_3x6_3(VIMSPLIT_H_DEL_OTHER,
+                           VIMSPLIT_V_DEL_OTHER_V,
                            KC_NO,
                            KC_NO,
                            KC_NO,

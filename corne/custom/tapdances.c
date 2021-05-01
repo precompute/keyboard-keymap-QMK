@@ -135,6 +135,9 @@ qk_tap_dance_action_t tap_dance_actions[] = {
   [VIMSIZE_J_FLIP]   = TAP_DANCE_SSSS(SS_LCTL(SS_LGUI("j")), SS_LCTL(SS_LGUI(SS_RGUI("-"))), 120),
   [VIMSIZE_K_FLOP]   = TAP_DANCE_SSSS(SS_LCTL(SS_LGUI("k")), SS_LCTL(SS_LGUI(SS_RGUI("\\"))), 120),
   [VIMSIZE_L_C_ROT]  = TAP_DANCE_SSSS(SS_LCTL(SS_LGUI("l")), SS_LCTL(SS_LGUI(SS_RGUI(","))), 120),
+/* *** Split / Delete Other Windows */
+  [VIMSPLIT_H_DEL_OTHER]   = TAP_DANCE_SSSS(SS_LCTL("ws"), SS_LGUI(SS_RGUI("'")), 120),
+  [VIMSPLIT_V_DEL_OTHER_V] = TAP_DANCE_SSSS(SS_LCTL("wv"), SS_LGUI(SS_RGUI("v")), 120),
 /* ** Other Shortcuts */
 /* *** Menu Terminal */
   [MENU_TERM] = TAP_DANCE_KCSS(KC_APP, SS_LSFT(SS_LCTL("z")), 120),
@@ -154,7 +157,3 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 /* SPC ff */
 /* SPC sd SPC sp */
 /* comma space for the key next to it */
-/* vsplit/c.rotate */
-/* hsplit/cc.rotate */
-/* vim move / resize */
-/* delete all frames except current */
