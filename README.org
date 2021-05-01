@@ -14,11 +14,15 @@ Default keymap that supports VIA, but with features incompatible with my keyboar
 
 ** custom
 
-My custom keymap.
+My custom keymap, personal default.
 
 [21-04-08] Functional but not as good as I'd like it to be, under development.
+
 [21-04-22] Stable, might add macros.
+
 [21-04-25] Vim+WM Macros
+
+[21-05-02] Many convenience macros & tap dances.  Might remove the QWERTY layer for good.
 
 | Layer # | Hosting                        |
 |---------+--------------------------------|
@@ -31,5 +35,3 @@ My custom keymap.
 |       6 | window manager shortcuts       |
 
 [[images/custom.png]]
-
-The image above hasnot been updated.
