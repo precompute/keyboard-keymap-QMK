@@ -130,6 +130,11 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 /* ** Vim */
 /* *** :%s/ :s/ */
   [VIM_SR_SR_ALL] = TAP_DANCE_SSSS(SS_TAP(X_ESC)":%s/", ":s/", 120),
+/* *** Size / Rotation */
+  [VIMSIZE_H_CC_ROT] = TAP_DANCE_SSSS(SS_LCTL(SS_LGUI("h")), SS_LCTL(SS_LGUI(SS_RGUI("."))), 120),
+  [VIMSIZE_J_FLIP]   = TAP_DANCE_SSSS(SS_LCTL(SS_LGUI("j")), SS_LCTL(SS_LGUI(SS_RGUI("-"))), 120),
+  [VIMSIZE_K_FLOP]   = TAP_DANCE_SSSS(SS_LCTL(SS_LGUI("k")), SS_LCTL(SS_LGUI(SS_RGUI("\\"))), 120),
+  [VIMSIZE_L_C_ROT]  = TAP_DANCE_SSSS(SS_LCTL(SS_LGUI("l")), SS_LCTL(SS_LGUI(SS_RGUI(","))), 120),
 /* ** Other Shortcuts */
 /* *** Menu Terminal */
   [MENU_TERM] = TAP_DANCE_KCSS(KC_APP, SS_LSFT(SS_LCTL("z")), 120),
@@ -146,7 +151,6 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 /* SPC ff */
 /* SPC sd SPC sp */
 /* volume tap hold = repeat 3xx */
-/* sym layer space = sentence end .spacespaceCAPITAL shift on hold */
 /* comma space for the key next to it */
 /* vsplit/c.rotate */
 /* hsplit/cc.rotate */

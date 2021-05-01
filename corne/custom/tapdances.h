@@ -22,6 +22,11 @@ enum {
   EQL_EQLCOL,
   GRASP_CAP_NOTE,
   SFT_END_SENT,
+
+  VIMSIZE_H_CC_ROT,
+  VIMSIZE_J_FLIP,
+  VIMSIZE_K_FLOP,
+  VIMSIZE_L_C_ROT,
 };
 
 // Declare the functions to be used with your tap dance key(s)
