@@ -158,7 +158,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 /* ** Super-Tab matrix scan */
 void matrix_scan_user(void) {
   if (is_rgui_tab_active) {
-    if (timer_elapsed(rgui_tab_timer) > 350) {
+    if (timer_elapsed(rgui_tab_timer) > 400) {
       unregister_code(KC_RGUI);
       is_rgui_tab_active = false;
     }
