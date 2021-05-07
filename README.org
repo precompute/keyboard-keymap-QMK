@@ -35,3 +35,88 @@ My custom keymap, personal default.
 |       6 | window manager shortcuts       |
 
 [[images/custom.png]]
+
+[21-05-03 10:35:57]
+
+The first layer is Colemak Mod-DH.  I switched from QWERTY because I wanted to maintain my QWERTY full size muscle memory in some form so I wouldn't have issues using other keyboards.  Some can type both (or even three) layouts with little difficulty on the same physical layout, but that takes time and requires a proper touch-type muscle memory, which I do not have.  Hence, even being able to type 50+ WPM on my Corne (Colemak Mod-DH) only a month after I started to use it, I still manage a respectable 60-70 wpm on a normal QWERTY keyboard.
+
+Colemak Mod-DH is one of the best layouts around, if you prefer rolls to alternate hand usage (for which you'd want to switch to Workman).  It puts the ten most used alphabets on the home row and the lower column of the index finger, covering all 10 easiest positions.  There are other layouts, like ColemaQ, which try to make this even better, but it's splitting hairs at this level.
+
+The Corne has only 42 keys, which seemed daunting when I first read about it and made me disregard it as a keyboard I'd want to own.  I came around after trying to make my own layout for the Corne on QMK's online configurator (QMK is the firmware used by most modern wired keyboards) and realized that it was completely possible to use a keyboard this small if I planned the layout properly.
+
+I used Gateron Yellow switches because they're very smooth linears and have an acceptably low actuation and bottom out force.  Clicky switches are often "fake clicky" and tactile switches seem redundant because I have to press the keys fully anyway.  Plus, some tactiles are so bad they can turn into clickies.  That left Linear switches as the only option.
+
+These were the modifiers I needed for my layout:
+
+- Control
+- Super
+- Alt
+- Hyper (A remapped Right Super in Xmodmap)
+
+Now, I had a total of six thumb keys.  Space was one key, and Shift another.  Two layer switch keys leave only two free, and one of those I gave to Backspace.  Hence, the one remaining key was mapped to Control, because it's the modifier key used most often in any application.
+
+I keep a half of my keyboard on either side of my monitor.  So, mixing hands was not possible and I also wanted to enforce strict touch-typing.  I had to figure out a way to make most modifiers and the other keys available without sacrificing functionality.
+
+For this, I decided to skip mirroring the thumb clusters.  Mirroring makes intuitive sense (mirroring is also used to type with one hand!) but accessibility trumps ease of adoption.  Colemak Mod-DH moves most standard shortcut keys to the left hand.  I also wanted Space on my left thumb.  This meant that I could either have a lone control key or I could move it to the other hand.  I also use many C-S- shortcuts, and a bit of experimentation suggested that with my flat profile keycaps, it was trivial to hit both other thumb keys at the same time.  Shift was the outer thumb key on the right because it's used very often.  Hence, Control went next to Shift.  I decided to initially use the outer key on the left thumb cluster for Super, but it was not used very often and I changed it to Backspace (which can also be easily used with Control now!).
+
+QMK allows keys to hold two or more functions without switching layers.  Many use the shift key as a dual enter (enter on tap, shift on hold) but I decided to forego this in favor of One-Shot Mods, which make modifiers behave like Sticky keys (when tapped once, they're active for the next keystroke).  I used the same for the layer keys.  This functionality really makes the fingers feel more free, and also increases the accuracy of typed words, because only the next key will be modified.  One-Shot also allows permanent toggle, which acts as if you're holding down the key.  I set this to two taps, which means I also get a proto Caps Lock key.  It isn't a true Caps Lock key because it also shifts symbols, but that's acceptable for me because I need to type capitals with underscores often.  The permanent toggle can be escaped by pressing the key once or by using it by holding it down.
+
+After the standard DH layout, I had the outer columns left.  Many prefer a keyboard that eliminates these outer columns and use a layout like Miryoku (https://github.com/manna-harbour/miryoku) that uses home row modifiers.  It can be adapted to a larger layout, but I disliked this layout because:
+
+- I don't think holding down a commonly used modifier can increase accuracy or contribute to increasing it in any meaningful manner
+
+- I like key repeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeat.  It's used everywhere.  Miryoku gimps vim-style navigation, which I now use /everywhere/, and was one of the big reasons why I was using a custom keyboard in the first  place.  I know it's possible to tap and hold, but then it's also possible to use a full size keyboard.
+
+- I mixed and matched modifiers for shortcuts on my full-size QWERTY keyboard and I'm not eager to change them, or to significantly alter my "regular" keyboard experience.
+
+My full-size keyboard was also heavily modified with ~Xmodmap~.  You can see what it looked like below:
+
+[[images/fullsize.png]]
+
+Caps is Enter because it's the key closest to a pinky.
+
+I have very little use for the Alt key.  My Emacs configuration is highly dependent on the Super key for emulating Vim's Normal Mode (with Evil) in the Insert Mode, and the Hyper key for WM shortcuts and some for Emacs.
+
+Symbols and numbers are reversed because I need to use symbols for quick navigation in Vim.
+
+The Caps / Ctrl  modification never made sense to me -- it underappreciates a very accessible key.
+
+The default position of the esc key is horrendous.  For a while, I had two Enter keys that I used to alternate for the lulz.  I later changed the Right Enter key to Bar / Backslash, which I use very often but not often enough for the large key to be an annoyance.  Escape graced the now vacant position until I grew annoyed with now far the Backspace key was (and how rattly!) and switched them.  I used a chord to escape to Normal node anyway, so that wasn't an issue for me.
+
+I wanted to bring this layout to my new keyboard as well and have most punctuation used in normal conversation / text on the base layer.  I need my hyphens and apostrophes every ten words.  So, those went on two keys on the right while the three of the remaining four were inspirationally filled, in memory of my (now dear departed) K120.
+
+And a few hours in, Delete was moved from the nav layer to the base layer, and filled the last available slot.
+
+My hands are large enough to make reaching the outer thumb key slightly uncomfortable.  So, the free key on the right went to the navigation layer while the other to the numbers layer.
+
+The navigation layer added Arrow keys in place of the regular vim navigation, and used the same below for Mouse navigation.  At the top it translated to extreme navigation with the Home / Page / End keys.  The mouse buttons went on the left, with primary click under the left homing key.  I earlier had more symbols on this layer but removed them in favor of an inefficient and improvised keypad-style Function key layout.  I use them sparingly.  Having them under the number layer involves subverting my expectations of where "1" is (because there are 12 Function keys), and a keypad-style layout helps me fix positions according to my fingers to avoid mistakes.  Putting similar navigation above and below keeps the layout simple and utilizes Prime Real Estate well.  QMK emulates a real HID mouse, so there was no need for a "hold" button -- holding the mouse keys works!  I added the Volume + / - keys here as well, in a position that suits their function.  Scroll up / down were similarly added on the right, for lack of space on the left.
+
+The ~-~ key changed into the ~RESET~ Layer key.  Escape was preserved.  Tab was now Print Screen, at an unmistakable position.
+
+QMK has a feature called *Tap Dance* which allows assigning multiple actions to a single key.  These actions can be triggered by depress / release and the time spent during the depression.  It can add new actions per successive state (previous tap / hold combos).  Tap and Tap-and-Hold are the only ones I prefer because they're easy to execute and because adding more than two actions to one key is not a requirement for me.
+
+Tap-and-Hold also disables key repeat and prevents accidentally triggering a one-use shortcut or action multiple times.  I have a repeat delay of ~120ms on my PC, and I used the same for the Tap-Hold configuration to make it feel responsive and natural.  Higher repeat delays can break flow.  As typing speed increases, repeat delay should decrease.  I have also used it to successfully increase my typing speed in the past.
+
+In place of the Delete key, the navigation layer adds a dual function key for Menu{{/Terminal/}}.  I almost never spawn more that one Terminal at a time and the menu key can be used with mouse keys.
+
+In QMK, layers are stacked on top of one another.  This allows easily defining layers with only a few keys changed.  This also means that every key can be different in another layer.  I decided to modify the left thumb keys on the nav layer after some trial and error.  I didn't need Space or the numbers layer on the nav layer, so they would change.  They also mirrored the asymmetric layout on the right from the base layer, so I assigned them Control and Shift, mirrored.
+
+Typing sentences is routine, and adding a period, double-spacing and then pressing shift can break flow because the required keys aren't on optimal positions on the keyboard.  I added a Tap-Hold with ".  {Shift}" on tap and Space on hold.  The function uses a one-shot modifier internally so I don't have to press Shift.  Executing the tap is trivial because the layer key is one-shot.  Pressing Space to break words is expected, and pressing a key before that to start a new sentence is relatable.  I also wanted to add ", " to Control similarly but didn't because it was the same number of keys.  Shift-pg* are used in the terminal often, and with the arrow keys to select text.  Control beside it lets me select / move by words, and this final modification really solidified the layer for me.
+
+The numbers layer is easy -- it's a text input layer and I needed the major positional / modification keys.  Plenty of shortcuts use numbers and symbols.  Tab, Return, Delete and Escape stay.  Numbers are in the middle row and utilize the inner columns.  The corresponding (shifted) symbols are on the layer above, with the brackets switched for Backslash and Equals.  This is so I can have regular brackets on an easy position in the lower row, with Square and Curly brackets behind and with opening and closing halves on either hand.  Lower inner columns go to lesser symbols like Plus and Bar, which are also used with numbers and the outer column on the middle row has a period.  The two remaining keys on the bottom row are Tilde and Backtick.  Tilde is above Backslash so I can quickly type "~/".  Outer / Inner column symbols are the odd men out because they don't have a pair and are hence easy to remember.  Using alternate halves for pairing is mirroring and is better than having them on one side.
+
+With Tap-and-Hold, the base layer also emulates Left and Right Super and Left Alt on extreme ends.  Alt is with hyphen at the corner because it's an easy position for the Pinky, and the Alt key is used to switch windows and sometimes used with Ctrl.  I had two Left Supers too, and giving one a prominent position seemed wrong.  On the left half, Left Super is on the outer column of the middle row for easy access in vim, and the right half has it symmetrically placed under ~g~.  Alt is used in Vim to execute Normal mode commands in insert mode, and I use Super for the same purpose in Emacs.  Hyper (as defined by ~Xmodmap~, it is not in the HID spec) is my "free" key for arcane, non-overlapping WM shortcuts and is a software remapped Right Super, and is given the next easy position.  Mod-Tap keys (Tap-and-Hold with modifiers) should be placed on keys that aren't alphabets.  The right half is an ideal place for them.
+
+The ~RESET~ layer has only one button of note -- the RESET button that, when pressed twice, allows flashing the microcontroller.  Since the keyboard has a Master half and a Slave half, only one Arduino Pro Micro is really active.  The other is a glorified I/O expander that doesn't respond to the RESET key.  So, this key can be used in lieu of the soldered RESET key when flashing.  I mirrored its position on each half on the upper keys on the outer columns for easy access.  This layer  also has a QWERTY base layer switch that I have only ever used once or twice, It'll be removed.
+
+The Vim layer is accessible through two keys and contains important vim shortcuts and functions to make mundane positioning, movement and searching tasks really easy and quick.  The ~o~ key can only be used once in normal mode.  It's also just outside the four-key vim nav cluster AND on the Home Row!  I really couldn't ask for any better.  Hence, ~o~ is used to enter the vim layer from the right half.  It allows me to keep my fingers on the standard home row position while having access to ~hjkl~ with the other three fingers.  ~hjkl~ are also modified with Left Super, my modifier key for emulating normal mode in any mode in Emacs' Evil.  This allows me to effortlessly move around without hitting escape or worry about what window I'm in or which minibuffer or prompt is active.  Using ~Super-hjkl~ doesn't affect Terminal Vim, because it discards any modifiers that aren't explicitly defined.  So, the nav keys are now firmly placed.  Above this row are the frame switching commands, and in the bottom layer are the frame size manipulation commands, which turn into rotate / flip / flop commands on hold.  All these keys can be easily reached with the pinky depressing ~o~.
+
+~v~ is used to enter the vim layer from the right half, and is present so I can access the keys outside ~o~ on the right half.  Those keys hold vim =ex= commands for substitution, edit and escape.  The substitution key can be depressed to enable ~%~, to consider the entire buffer.  These keys assume Normal mode.  On the right, all keys employ Tap-and-Hold because the commands only need to be executed once.  The two outer keys on the top layer are used split and delete-other-windows, on tap and hold.  ~z~ below the pinky is given Escape and Emacs' ~C-g~ for easy accessibility, while the others handle search, find-file and find-in-project.  There is quite a bit of Prime Real Estate on the vim layer, which I have no use for.  Apart from a possible key for ~make~, I see no contenders that are distinctive enough or used often enough.  I have other destructive functions mapped to the function keys, which are on the nav layer.  Common save and frame - buffer deletion commands fall in this category.
+
+The vim layer can also be potentially disastrous if the commands above / below the home row are executed in Insert mode ,and may lead to deleted words.  It must be used carefully.  A Tap-and-Hold on ~o~ also means that rolling  words need to be precisely typed, and the next key only depressed after the first isn't any longer.  If not, it might output ~hjkl~ instead of ~mnei~.
+
+The Window Manager layer is a Tap-and-Hold with the Colon key, the last free non-alphabet on the outside.  Only the Firefox shortcuts for [[https://github.com/karlicoss/grasp/][Grasp]] exist on the top key of the inner column for quick one-hand use.  The outer 3x3 square is used to position windows, with the center key for emulating Super-Tab via a QMK Macro.  ~s~ and ~t~ switch workspaces, ~b~ and ~v~ maximize and minimize, ~c~ and ~d~ expand a window horizontally / vertically and ~f~ and ~p~ move windows across workspaces.  The easy keybinds allow me to manipulate my open windows without resorting to arcane three modifier shortcuts (which are what I used on my full size).
+
+In my keymap, I've separated the Macros and Tap Dances to separate files and headers.  Tap-and-Hold Tap Dances use a different struct, start and finish functions, and a C Macro that allows me to easily define new Tap Dances for any combination of Key Codes and Strings without needing to write a function for each.  For the one outlier (".  {Shift}") I didn't bother.
+
+Because QMK can only use pre-defined Key Codes for Tap Dances, any Macro that needs a hold function needs to be removed and added ar a Tap Dance instead.  The C Macros aid with this greatly.  For the C Macros, [[https://github.com/sevanteri/qmk_firmware/blob/7d59eeff4ddbc09758412ed74ad22a0062312388/users/sevanteri/tap_dance_config.c][Sevanteri's config]] helped.  It is also where I adapted the sentence-end-key idea from.
