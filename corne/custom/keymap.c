@@ -291,7 +291,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_TRNS, /* LGUI_T(KC_SPC), */
                            KC_TRNS,
                            KC_TRNS,
-                           KC_TRNS
+                           MO(7)
                            ),
 
 /* ** WM and Misc */
@@ -327,6 +327,54 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            WM_MAX_H,
                            WM_MAX_V,
                            WM_MIN,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+
+                           KC_TRNS,
+                           KC_TRNS,
+                           KC_TRNS,
+                           KC_TRNS,
+                           KC_TRNS,
+                           KC_TRNS
+                           ),
+
+/* ** Textmind */
+  [7] = LAYOUT_split_3x6_3(KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+
+                           KC_THROW_0,
+                           KC_THROW_1,
+                           KC_THROW_2,
+                           KC_THROW_3,
+                           KC_THROW_4,
+                           KC_THROW_5,
+                           KC_THROW_6,
+                           KC_THROW_7,
+                           KC_THROW_8,
+                           KC_THROW_9,
+                           KC_NO,
+                           KC_NO,
+
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
                            KC_NO,
                            KC_NO,
                            KC_NO,
