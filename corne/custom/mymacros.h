@@ -11,17 +11,6 @@ enum custom_keycodes {
     /* VIMSPLIT_V, */
     /* VIMSPLIT_H, */
 
-    KC_THROW_1,
-    KC_THROW_2,
-    KC_THROW_3,
-    KC_THROW_4,
-    KC_THROW_5,
-    KC_THROW_6,
-    KC_THROW_7,
-    KC_THROW_8,
-    KC_THROW_9,
-    KC_THROW_0,
-
     WM_MAX,
     WM_MIN,
     WM_MAX_H,

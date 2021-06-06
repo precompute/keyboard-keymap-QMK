@@ -52,69 +52,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     /*         SEND_STRING(SS_LCTL("wv")); */
     /*     return false; */
     /*     break; */
-/* * Textmind */
-/* ** Throw */
-    case KC_THROW_1:
-        if (record->event.pressed)
-            tap_code16(RGUI(KC_F));
-            SEND_STRING("1"SS_TAP(X_ENT));
-        return false;
-        break;
-    case KC_THROW_2:
-        if (record->event.pressed)
-            tap_code16(RGUI(KC_F));
-            SEND_STRING("2"SS_TAP(X_ENT));
-        return false;
-        break;
-    case KC_THROW_3:
-        if (record->event.pressed)
-            tap_code16(RGUI(KC_F));
-            SEND_STRING("3"SS_TAP(X_ENT));
-        return false;
-        break;
-    case KC_THROW_4:
-        if (record->event.pressed)
-            tap_code16(RGUI(KC_F));
-            SEND_STRING("4"SS_TAP(X_ENT));
-        return false;
-        break;
-    case KC_THROW_5:
-        if (record->event.pressed)
-            tap_code16(RGUI(KC_F));
-            SEND_STRING("5"SS_TAP(X_ENT));
-        return false;
-        break;
-    case KC_THROW_6:
-        if (record->event.pressed)
-            tap_code16(RGUI(KC_F));
-            SEND_STRING("6"SS_TAP(X_ENT));
-        return false;
-        break;
-    case KC_THROW_7:
-        if (record->event.pressed)
-            tap_code16(RGUI(KC_F));
-            SEND_STRING("7"SS_TAP(X_ENT));
-        return false;
-        break;
-    case KC_THROW_8:
-        if (record->event.pressed)
-            tap_code16(RGUI(KC_F));
-            SEND_STRING("8"SS_TAP(X_ENT));
-        return false;
-        break;
-    case KC_THROW_9:
-        if (record->event.pressed)
-            tap_code16(RGUI(KC_F));
-            SEND_STRING("9"SS_TAP(X_ENT));
-        return false;
-        break;
-    case KC_THROW_0:
-        if (record->event.pressed)
-            tap_code16(RGUI(KC_F));
-            SEND_STRING("0"SS_TAP(X_ENT));
-        return false;
-        break;
-
 /* * Window Manager */
 /* ** Size */
     case WM_MAX:
