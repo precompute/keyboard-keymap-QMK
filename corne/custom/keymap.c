@@ -64,7 +64,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_Y,
                            KC_U,
                            KC_I,
-                           KC_O,
+                           LT(6, KC_O),
                            KC_P,
                            KC_ESC,
 
@@ -72,7 +72,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_A,
                            KC_S,
                            KC_D,
-                           KC_F,
+                           LGUI_T(KC_F),
                            KC_G,
                            KC_H,
                            KC_J,
@@ -91,7 +91,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_M,
                            KC_COMM,
                            KC_DOT,
-                           KC_SLSH,
+                           RGUI_T(KC_SLSH),
                            LALT_T(KC_MINS),
 
 
@@ -340,6 +340,54 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_TRNS,
                            KC_TRNS,
                            KC_TRNS
+                           ),
+/* ** QWERTY+arrows */
+  [7] = LAYOUT_split_3x6_3(KC_TAB,
+                           KC_Q,
+                           KC_W,
+                           KC_E,
+                           KC_R,
+                           KC_T,
+                           KC_Y,
+                           KC_U,
+                           KC_MS_U,
+                           LT(6, KC_O),
+                           KC_P,
+                           KC_ESC,
+
+                           KC_ENT,
+                           KC_A,
+                           KC_S,
+                           KC_D,
+                           LGUI_T(KC_F),
+                           KC_G,
+                           KC_H,
+                           KC_MS_L,
+                           KC_MS_D,
+                           KC_MS_R,
+                           KC_SCLN,
+                           LGUI_T(KC_QUOT),
+
+                           KC_DEL,
+                           KC_Z,
+                           KC_X,
+                           KC_C,
+                           KC_V,
+                           KC_B,
+                           KC_N,
+                           KC_M,
+                           KC_COMM,
+                           KC_DOT,
+                           RGUI_T(KC_SLSH),
+                           LALT_T(KC_MINS),
+
+
+                           KC_BSPC,
+                           OSL(2),
+                           KC_SPC,
+                           OSM(MOD_LSFT),
+                           OSM(MOD_LCTL),
+                           OSL(3)
                            ),
 
 };
