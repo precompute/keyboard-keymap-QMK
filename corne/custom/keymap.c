@@ -202,7 +202,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [4] = LAYOUT_split_3x6_3(RESET,
                            DF(1),
                            DF(0),
-                           KC_NO,
+                           DF(7),
                            KC_NO,
                            KC_NO,
                            KC_NO,
@@ -350,7 +350,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_T,
                            KC_Y,
                            KC_U,
-                           KC_MS_U,
+                           KC_UP,
                            LT(6, KC_O),
                            KC_P,
                            KC_ESC,
@@ -362,10 +362,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            LGUI_T(KC_F),
                            KC_G,
                            KC_H,
-                           KC_MS_L,
-                           KC_MS_D,
-                           KC_MS_R,
-                           KC_SCLN,
+                           KC_LEFT,
+                           KC_DOWN,
+                           KC_RIGHT,
+                           KC_N,
                            LGUI_T(KC_QUOT),
 
                            KC_DEL,
@@ -387,7 +387,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_SPC,
                            OSM(MOD_LSFT),
                            OSM(MOD_LCTL),
-                           OSL(3)
+                           DF(0)
                            ),
 
 };
