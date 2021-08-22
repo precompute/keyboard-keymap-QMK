@@ -291,7 +291,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_TRNS, /* LGUI_T(KC_SPC), */
                            KC_TRNS,
                            KC_TRNS,
-                           KC_TRNS
+                           MO(8)
                            ),
 
 /* ** WM and Misc */
@@ -388,6 +388,53 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            OSM(MOD_LSFT),
                            OSM(MOD_LCTL),
                            DF(0)
+                           ),
+/* ** VIM 2 */
+  [8] = LAYOUT_split_3x6_3(KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           EMACS_SEXP_P,
+                           EMACS_GIT_HUNK_N,
+                           EMACS_GIT_HUNK_P,
+                           EMACS_SEXP_N,
+                           KC_NO,
+                           KC_NO,
+
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           EMACS_BW_B,
+                           EMACS_B_D,
+                           EMACS_B_U,
+                           EMACS_BW_F,
+                           KC_NO,
+                           KC_NO,
+
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           TD(EMACS_COMMENT),
+                           EMACS_VISUAL,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+
+                           KC_TRNS,
+                           KC_TRNS,
+                           KC_TRNS,
+                           KC_TRNS,
+                           KC_TRNS,
+                           KC_TRNS
                            ),
 
 };

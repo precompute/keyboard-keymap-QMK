@@ -30,6 +30,46 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         break;
 /* * Vim Movement */
 /* ** Hyper */
+    case EMACS_BW_B:
+        if (record->event.pressed)
+            SEND_STRING(SS_LGUI("B"));
+        return false;
+        break;
+    case EMACS_B_D:
+        if (record->event.pressed)
+            tap_code16(LGUI(RGUI(KC_J)));
+        return false;
+        break;
+    case EMACS_B_U:
+        if (record->event.pressed)
+            tap_code16(LGUI(RGUI(KC_K)));
+        return false;
+        break;
+    case EMACS_BW_F:
+        if (record->event.pressed)
+            SEND_STRING(SS_LGUI("W"));
+        return false;
+        break;
+    case EMACS_SEXP_P:
+        if (record->event.pressed)
+            tap_code16(LCTL(LALT(KC_B)));
+        return false;
+        break;
+    case EMACS_GIT_HUNK_N:
+        if (record->event.pressed)
+            SEND_STRING(SS_LGUI(" ")"g]");
+        return false;
+        break;
+    case EMACS_GIT_HUNK_P:
+        if (record->event.pressed)
+            SEND_STRING(SS_LGUI(" ")"g[");
+        return false;
+        break;
+    case EMACS_SEXP_N:
+        if (record->event.pressed)
+            tap_code16(LCTL(LALT(KC_F)));
+        return false;
+        break;
 /* ** Buffer */
     case VIMBUF_P:
         if (record->event.pressed)
@@ -52,6 +92,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case VIMEXEC:
         if (record->event.pressed)
             SEND_STRING(SS_LALT("!"));
+        return false;
+        break;
+/* ** Visual */
+    case EMACS_VISUAL:
+        if (record->event.pressed)
+            SEND_STRING(SS_LGUI("V"));
         return false;
         break;
 /* ** Split */

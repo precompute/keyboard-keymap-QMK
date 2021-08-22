@@ -30,6 +30,15 @@ enum custom_keycodes {
     WM_TILE_BL,
     WM_TILE_BR,
 
+    EMACS_SEXP_P,
+    EMACS_GIT_HUNK_N,
+    EMACS_GIT_HUNK_P,
+    EMACS_SEXP_N,
+    EMACS_BW_B,
+    EMACS_B_D,
+    EMACS_B_U,
+    EMACS_BW_F,
+    EMACS_VISUAL,
     RGUI_TAB
 };
 

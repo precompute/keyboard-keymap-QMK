@@ -149,6 +149,8 @@ qk_tap_dance_action_t tap_dance_actions[] = {
   [EMACS_NMODE_CG] = TAP_DANCE_SSSS(SS_TAP(X_ESC), SS_LCTL("g"), 120),
 /* *** comment skip / imenu */
   [EMACS_COMSKIP_IMENU] = TAP_DANCE_SSSS(SS_LCTL(SS_LGUI("=")), SS_LGUI(" ")"si", 120),
+/* *** comment line / selection */
+  [EMACS_COMMENT] = TAP_DANCE_SSSS(SS_LGUI("gcc"), SS_LGUI("gc"), 120),
 /* ** Other Shortcuts */
 /* *** Menu Terminal */
   [MENU_TERM] = TAP_DANCE_KCSS(KC_APP, SS_LSFT(SS_LCTL("z")), 120),

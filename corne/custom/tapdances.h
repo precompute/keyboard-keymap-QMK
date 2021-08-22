@@ -39,6 +39,7 @@ enum {
   EMACS_SEARCH_ISEARCH,
   EMACS_NMODE_CG,
   EMACS_COMSKIP_IMENU,
+  EMACS_COMMENT,
 };
 
 // Declare the functions to be used with your tap dance key(s)
