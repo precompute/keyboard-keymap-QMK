@@ -28,6 +28,19 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             SEND_STRING(SS_LCTL("wl"));
         return false;
         break;
+/* * Vim Movement */
+/* ** Hyper */
+/* ** Buffer */
+    case VIMBUF_P:
+        if (record->event.pressed)
+            SEND_STRING(SS_LGUI(" ")"bp");
+        return false;
+        break;
+    case VIMBUF_N:
+        if (record->event.pressed)
+            SEND_STRING(SS_LGUI(" ")"bn");
+        return false;
+        break;
 /* * Vim Misc */
 /* ** Edit */
     case VIMEDIT:

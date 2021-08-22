@@ -6,6 +6,8 @@ enum custom_keycodes {
     VIMDOW_D,
     VIMDOW_U,
     VIMDOW_R,
+    VIMBUF_P,
+    VIMBUF_N,
     VIMEDIT,
     VIMEXEC,
     /* VIMSPLIT_V, */
