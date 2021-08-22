@@ -38,6 +38,7 @@ enum {
   SPC_SD_SP,
   EMACS_SEARCH_ISEARCH,
   EMACS_NMODE_CG,
+  EMACS_COMSKIP_IMENU,
 };
 
 // Declare the functions to be used with your tap dance key(s)
