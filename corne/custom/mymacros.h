@@ -39,6 +39,9 @@ enum custom_keycodes {
     EMACS_B_U,
     EMACS_BW_F,
     EMACS_VISUAL,
+    EMACS_HEADING_P,
+    EMACS_HEADING_N,
+    EMACS_DIRED_JUMP,
     RGUI_TAB
 };
 
