@@ -14,6 +14,33 @@ Default keymap that supports VIA, but with features incompatible with my keyboar
 
 ** custom
 
+#+begin_src bash
+$ qmk compile -kb crkbd -km custom
+Ψ Compiling keymap with gmake -j 1 crkbd/rev1/legacy:custom
+
+
+QMK Firmware 0.12.29
+Making crkbd/rev1/legacy with keymap custom
+
+avr-gcc (GCC) 5.4.0
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Size before:
+   text	   data	    bss	    dec	    hex	filename
+      0	  20574	      0	  20574	   505e	.build/crkbd_rev1_legacy_custom.hex
+
+Compiling: keyboards/crkbd/keymaps/custom/mymacros.c                                                [OK]
+Compiling: keyboards/crkbd/keymaps/custom/tapdances.c                                               [OK]
+Compiling: keyboards/crkbd/keymaps/custom/keymap.c                                                  [OK]
+Linking: .build/crkbd_rev1_legacy_custom.elf                                                        [OK]
+Creating load file for flashing: .build/crkbd_rev1_legacy_custom.hex                                [OK]
+Copying crkbd_rev1_legacy_custom.hex to qmk_firmware folder                                         [OK]
+Checking file size of crkbd_rev1_legacy_custom.hex                                                  [OK]
+ * The firmware size is fine - 20612/28672 (71%, 8060 bytes free)
+#+end_src
+
 My custom keymap, personal default.
 
 [21-04-08] Functional but not as good as I'd like it to be, under development.
@@ -30,9 +57,13 @@ My custom keymap, personal default.
 |       1 | qwerty                         |
 |       2 | numbers and symbols            |
 |       3 | fn, nav, mousekeys and misc    |
-|       4 | vim nav                        |
-|       5 | Reset, Colemak / qwerty switch |
+|       4 | Reset, Colemak / qwerty switch |
+|       5 | vim nav                        |
 |       6 | window manager shortcuts       |
+|       7 | qwerty + arrows (multimedia)   |
+|       8 | vim 2                          |
+
+[21-09-18] Two new layers named in README, not fully documented.
 
 [[./images/custom.png]]
 
