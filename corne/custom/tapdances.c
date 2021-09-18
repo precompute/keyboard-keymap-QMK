@@ -151,6 +151,8 @@ qk_tap_dance_action_t tap_dance_actions[] = {
   [EMACS_COMSKIP_IMENU] = TAP_DANCE_SSSS(SS_LCTL(SS_LGUI("=")), SS_LGUI(" ")"si", 120),
 /* *** comment line / selection */
   [EMACS_COMMENT] = TAP_DANCE_SSSS(SS_LGUI("gcc"), SS_LGUI("gc"), 120),
+/* *** toggle fold / global unfold all */
+  [EMACS_FOLDING_T_ALL] = TAP_DANCE_SSSS(SS_LCTL("cft"), SS_LCTL("cfs"), 120),
 /* ** Other Shortcuts */
 /* *** Menu Terminal */
   [MENU_TERM] = TAP_DANCE_KCSS(KC_APP, SS_LSFT(SS_LCTL("z")), 120),

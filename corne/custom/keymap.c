@@ -261,7 +261,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            VIMEXEC,
 
                            TD(EMACS_COMSKIP_IMENU),
-                           KC_NO,
+                           TD(EMACS_FOLDING_T_ALL),
                            KC_NO,
                            KC_NO,
                            KC_NO,
