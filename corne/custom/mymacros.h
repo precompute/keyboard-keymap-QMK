@@ -46,6 +46,7 @@ enum custom_keycodes {
     EMACS_FDEFBEG_P,
     EMACS_FDEFEND_N,
     EMACS_FDEFEND_P,
+    EMACS_WIND_C,
     RGUI_TAB
 };
 

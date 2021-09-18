@@ -260,7 +260,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            VIMEDIT,
                            VIMEXEC,
 
-                           TD(EMACS_COMSKIP_IMENU),
+                           EMACS_WIND_C,
                            TD(EMACS_FOLDING_T_ALL),
                            KC_NO,
                            KC_NO,
@@ -270,7 +270,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            LGUI(KC_J),
                            LGUI(KC_K),
                            LGUI(KC_L),
-                           KC_NO,
+                           TD(EMACS_COMSKIP_IMENU),
                            TD(VIM_SR_SR_ALL),
 
                            TD(SPC_SD_SP),
