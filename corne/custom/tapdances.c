@@ -14,22 +14,22 @@ td_state_t cur_dance(qk_tap_dance_state_t *state) {
 
 // Initialize tap structure associated with example tap dance key
 static td_tap_t ql_tap_state = {
-  .is_press_action = true,
-  .state = TD_NONE
+.is_press_action = true,
+.state = TD_NONE
 };
 
 void ql_finished(qk_tap_dance_state_t *state, void *user_data) {
   ql_tap_state.state = cur_dance(state);
   switch (ql_tap_state.state) {
-  case TD_SINGLE_TAP:
-    SEND_STRING(".  ");
-    set_oneshot_mods(MOD_LSFT | get_oneshot_mods());
-    break;
-  case TD_SINGLE_HOLD:
-    register_code(KC_LSFT);
-    break;
-  case TD_NONE:
-    break;
+    case TD_SINGLE_TAP:
+      SEND_STRING(".  ");
+      set_oneshot_mods(MOD_LSFT | get_oneshot_mods());
+      break;
+    case TD_SINGLE_HOLD:
+      register_code(KC_LSFT);
+      break;
+    case TD_NONE:
+      break;
   }
 }
 
@@ -38,13 +38,13 @@ void ql_reset(qk_tap_dance_state_t *state, void *user_data) {
     /* case TD_SINGLE_TAP: */
     /*   unregister_code(KC_X); */
     /*   break; */
-  case TD_SINGLE_TAP:
-    break;
-  case TD_SINGLE_HOLD:
-    unregister_code(KC_LSFT);
-    break;
-  case TD_NONE:
-    break;
+    case TD_SINGLE_TAP:
+      break;
+    case TD_SINGLE_HOLD:
+      unregister_code(KC_LSFT);
+      break;
+    case TD_NONE:
+      break;
   }
   ql_tap_state.state = TD_NONE;
 }
@@ -120,50 +120,50 @@ void td_kckc_r(qk_tap_dance_state_t *state, void* user_data) {
 qk_tap_dance_action_t tap_dance_actions[] = {
 /* ** General */
 /* *** LPRN  ) -> */
-  [LPRN_ARROW] = TAP_DANCE_KCSS(KC_LPRN, "<-", 120),
+[LPRN_ARROW] = TAP_DANCE_KCSS(KC_LPRN, "<-", 120),
 /* *** RPRN  ( <- */
-  [RPRN_ARROW] = TAP_DANCE_KCSS(KC_RPRN, "->", 120),
+[RPRN_ARROW] = TAP_DANCE_KCSS(KC_RPRN, "->", 120),
 /* *** = =: */
-  [EQL_EQLCOL] = TAP_DANCE_KCSS(KC_EQL, "=:", 120),
+[EQL_EQLCOL] = TAP_DANCE_KCSS(KC_EQL, "=:", 120),
 /* *** Grasp capture / note */
-  [GRASP_CAP_NOTE] = TAP_DANCE_SSSS(SS_LCTL(SS_LALT("c")), SS_LCTL(SS_LALT("y")), 120),
+[GRASP_CAP_NOTE] = TAP_DANCE_SSSS(SS_LCTL(SS_LALT("c")), SS_LCTL(SS_LALT("y")), 120),
 /* ** Vim */
 /* *** :%s/ :s/ */
-  [VIM_SR_SR_ALL] = TAP_DANCE_SSSS(SS_TAP(X_ESC)":%s/", ":s/", 120),
+[VIM_SR_SR_ALL] = TAP_DANCE_SSSS(SS_TAP(X_ESC)":%s/", ":s/", 120),
 /* *** Size / Rotation */
-  [VIMSIZE_H_CC_ROT] = TAP_DANCE_SSSS(SS_LCTL(SS_LGUI("h")), SS_LCTL(SS_LGUI(SS_RGUI("."))), 120),
-  [VIMSIZE_J_FLIP]   = TAP_DANCE_SSSS(SS_LCTL(SS_LGUI("j")), SS_LCTL(SS_LGUI(SS_RGUI("-"))), 120),
-  [VIMSIZE_K_FLOP]   = TAP_DANCE_SSSS(SS_LCTL(SS_LGUI("k")), SS_LCTL(SS_LGUI(SS_RGUI("\\"))), 120),
-  [VIMSIZE_L_C_ROT]  = TAP_DANCE_SSSS(SS_LCTL(SS_LGUI("l")), SS_LCTL(SS_LGUI(SS_RGUI(","))), 120),
+[VIMSIZE_H_CC_ROT] = TAP_DANCE_SSSS(SS_LCTL(SS_LGUI("h")), SS_LCTL(SS_LGUI(SS_RGUI("."))), 120),
+[VIMSIZE_J_FLIP]   = TAP_DANCE_SSSS(SS_LCTL(SS_LGUI("j")), SS_LCTL(SS_LGUI(SS_RGUI("-"))), 120),
+[VIMSIZE_K_FLOP]   = TAP_DANCE_SSSS(SS_LCTL(SS_LGUI("k")), SS_LCTL(SS_LGUI(SS_RGUI("\\"))), 120),
+[VIMSIZE_L_C_ROT]  = TAP_DANCE_SSSS(SS_LCTL(SS_LGUI("l")), SS_LCTL(SS_LGUI(SS_RGUI(","))), 120),
 /* *** Split / Delete Other Windows */
-  [VIMSPLIT_H_DEL_OTHER]   = TAP_DANCE_SSSS(SS_LCTL("ws"), SS_LGUI(SS_RGUI("'")), 120),
-  [VIMSPLIT_V_DEL_OTHER_V] = TAP_DANCE_SSSS(SS_LCTL("wv"), SS_LGUI(SS_RGUI("v")), 120),
+[VIMSPLIT_H_DEL_OTHER]   = TAP_DANCE_SSSS(SS_LCTL("ws"), SS_LGUI(SS_RGUI("'")), 120),
+[VIMSPLIT_V_DEL_OTHER_V] = TAP_DANCE_SSSS(SS_LCTL("wv"), SS_LGUI(SS_RGUI("v")), 120),
 /* ** Emacs */
 /* *** find file / find recent */
-  [SPC_FF_FR] = TAP_DANCE_SSSS(" ff", " fr", 120),
+[SPC_FF_FR] = TAP_DANCE_SSSS(" ff", " fr", 120),
 /* *** search directory / search project */
-  [SPC_SD_SP] = TAP_DANCE_SSSS(" sd", " sp", 120),
+[SPC_SD_SP] = TAP_DANCE_SSSS(" sd", " sp", 120),
 /* *** swiper search / isearch */
-  [EMACS_SEARCH_ISEARCH] = TAP_DANCE_SSSS(SS_LCTL("ss"), SS_LCTL("s")"s", 120),
+[EMACS_SEARCH_ISEARCH] = TAP_DANCE_SSSS(SS_LCTL("ss"), SS_LCTL("s")"s", 120),
 /* *** Normal Mode / C-g */
-  [EMACS_NMODE_CG] = TAP_DANCE_SSSS(SS_TAP(X_ESC), SS_LCTL("g"), 120),
+[EMACS_NMODE_CG] = TAP_DANCE_SSSS(SS_TAP(X_ESC), SS_LCTL("g"), 120),
 /* *** comment skip / imenu */
-  [EMACS_COMSKIP_IMENU] = TAP_DANCE_SSSS(SS_LCTL(SS_LGUI("=")), SS_LGUI(" ")"si", 120),
+[EMACS_COMSKIP_IMENU] = TAP_DANCE_SSSS(SS_LCTL(SS_LGUI("=")), SS_LGUI(" ")"si", 120),
 /* *** comment line / selection */
-  [EMACS_COMMENT] = TAP_DANCE_SSSS(SS_LGUI("gcc"), SS_LGUI("gc"), 120),
+[EMACS_COMMENT] = TAP_DANCE_SSSS(SS_LGUI("gcc"), SS_LGUI("gc"), 120),
 /* *** toggle fold / global unfold all */
-  [EMACS_FOLDING_T_ALL] = TAP_DANCE_SSSS(SS_LCTL("cft"), SS_LCTL("cfs"), 120),
+[EMACS_FOLDING_T_ALL] = TAP_DANCE_SSSS(SS_LCTL("cft"), SS_LCTL("cfs"), 120),
 /* ** Other Shortcuts */
 /* *** Menu Terminal */
-  [MENU_TERM] = TAP_DANCE_KCSS(KC_APP, SS_LSFT(SS_LCTL("z")), 120),
+[MENU_TERM] = TAP_DANCE_KCSS(KC_APP, SS_LSFT(SS_LCTL("z")), 120),
 /* *** Shift Sentence End */
 /* Adapted from sevanteri QMK config */
 /* https://github.com/sevanteri/qmk_firmware/blob/7d59eeff4ddbc09758412ed74ad22a0062312388/users/sevanteri/tap_dance_config.c */
-  /* [SFT_END_SENT] = TAP_DANCE_SSKC(".  ", KC_LSFT, 120), */
-  [SFT_END_SENT] = ACTION_TAP_DANCE_FN_ADVANCED_TIME(NULL, ql_finished, ql_reset, 120),
+/* [SFT_END_SENT] = TAP_DANCE_SSKC(".  ", KC_LSFT, 120), */
+[SFT_END_SENT] = ACTION_TAP_DANCE_FN_ADVANCED_TIME(NULL, ql_finished, ql_reset, 120),
 /* *** Volume */
-  [VOLD_3X] = TAP_DANCE_SSSS(SS_TAP(X_VOLD), SS_TAP(X_VOLD)SS_TAP(X_VOLD)SS_TAP(X_VOLD), 120),
-  [VOLU_3X] = TAP_DANCE_SSSS(SS_TAP(X_VOLU), SS_TAP(X_VOLU)SS_TAP(X_VOLU)SS_TAP(X_VOLU), 120),
+[VOLD_3X] = TAP_DANCE_SSSS(SS_TAP(X_VOLD), SS_TAP(X_VOLD)SS_TAP(X_VOLD)SS_TAP(X_VOLD), 120),
+[VOLU_3X] = TAP_DANCE_SSSS(SS_TAP(X_VOLU), SS_TAP(X_VOLU)SS_TAP(X_VOLU)SS_TAP(X_VOLU), 120),
 };
 
 /* * TODO */
