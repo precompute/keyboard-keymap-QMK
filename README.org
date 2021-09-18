@@ -34,7 +34,7 @@ My custom keymap, personal default.
 |       5 | Reset, Colemak / qwerty switch |
 |       6 | window manager shortcuts       |
 
-[[images/custom.png]]
+[[./images/custom.png]]
 
 [21-05-03 10:35:57]
 
@@ -71,7 +71,7 @@ After the standard DH layout, I had the outer columns left.  Many prefer a keybo
 
 My full-size keyboard was also heavily modified with ~Xmodmap~.  You can see what it looked like below:
 
-[[images/fullsize.png]]
+[[./images/fullsize.png]]
 
 Caps is Enter because it's the key closest to a pinky.
 
