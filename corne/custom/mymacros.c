@@ -84,6 +84,26 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             SEND_STRING(SS_LGUI(" ")"oo");
         return false;
         break;
+    case EMACS_FDEFBEG_N:
+        if (record->event.pressed)
+            SEND_STRING(SS_RGUI("]")"m");
+        return false;
+        break;
+    case EMACS_FDEFBEG_P:
+        if (record->event.pressed)
+            SEND_STRING(SS_RGUI("[")"m");
+        return false;
+        break;
+    case EMACS_FDEFEND_N:
+        if (record->event.pressed)
+            SEND_STRING(SS_RGUI("]")"M");
+        return false;
+        break;
+    case EMACS_FDEFEND_P:
+        if (record->event.pressed)
+            SEND_STRING(SS_RGUI("[")"M");
+        return false;
+        break;
 /* * Vim Movement */
 /* ** Buffer */
     case VIMBUF_P:

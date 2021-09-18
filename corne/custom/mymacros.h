@@ -42,6 +42,10 @@ enum custom_keycodes {
     EMACS_HEADING_P,
     EMACS_HEADING_N,
     EMACS_DIRED_JUMP,
+    EMACS_FDEFBEG_N,
+    EMACS_FDEFBEG_P,
+    EMACS_FDEFEND_N,
+    EMACS_FDEFEND_P,
     RGUI_TAB
 };
 
