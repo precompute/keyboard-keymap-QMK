@@ -2,6 +2,7 @@
 #include QMK_KEYBOARD_H
 #include "mymacros.h"
 #include "tapdances.h"
+#include "myunicode.h"
 
 /* * Keymap */
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -38,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                          KC_C,
                          KC_D,
                          LT(5, KC_V),
-                         KC_K,
+                         LT(9, KC_K),
                          KC_H,
                          KC_COMM,
                          KC_DOT,
@@ -437,4 +438,51 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_TRNS
                            ),
 
+/* ** Unicode */
+  [9] = LAYOUT_split_3x6_3(KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           XP(UUMLAUT,UUMLAUTC),
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+
+                           KC_NO,
+                           XP(AUMLAUT,AUMLAUTC),
+                           KC_NO,
+                           X(ESZETT),
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           XP(OUMLAUT,OUMLAUTC),
+                           KC_NO,
+
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO, //K
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
+
+                           KC_TRNS,
+                           KC_TRNS,
+                           KC_TRNS,
+                           KC_TRNS,
+                           KC_TRNS,
+                           KC_TRNS
+                           ),
 };

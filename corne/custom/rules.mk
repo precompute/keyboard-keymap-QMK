@@ -8,7 +8,7 @@
 #   change to "no" to disable the options, or define them in the Makefile in
 #   the appropriate keymap folder that will get included automatically
 #
-SRC+= mymacros.c tapdances.c
+SRC+= mymacros.c tapdances.c myunicode.c
 
 # ** Enabled
 CFLAGS += -flto
@@ -20,6 +20,7 @@ NKRO_ENABLE = yes        # Nkey Rollover - if this doesn't work, see here: https
 TAP_DANCE_ENABLE = yes
 # SPLIT_KEYBOARD = yes
 # SPLIT_TRANSPORT = mirror # for when Split Mirroring drops, it will maintain mirroring functionality
+UNICODEMAP_ENABLE = yes    # Unicode
 
 # ** Disabled
 AUDIO_ENABLE = no      # Audio output on port C6

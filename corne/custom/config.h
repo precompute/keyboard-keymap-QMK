@@ -42,3 +42,5 @@
 /* #define MK_C_INTERVAL_UNMOD 8 */
 /* #define MK_C_OFFSET_UNMOD 20 */
 /* #define MK_W_INTERVAL_UNMOD 20 */
+
+#define UNICODE_SELECTED_MODES UC_LNX
