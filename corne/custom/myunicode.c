@@ -10,6 +10,7 @@ const uint32_t PROGMEM unicode_map[] = {
 [AUMLAUTC] = 0x00C4, //Ä
 [OUMLAUTC] = 0x00D6, //Ö
 [UUMLAUTC] = 0x00DC, //Ü
+[AIGU]     = 0x00E9, //é
 };
 
 /* Character	Unicode Character Number (Decimal)	Unicode Character (Hexadecimal ) */
