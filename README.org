@@ -65,6 +65,7 @@ My custom keymap, personal default.
 
 [21-09-18] Two new layers named in README, not fully documented.
 
+[22-05-09] Four new macros, not in the graphic.
 [[./images/custom.png]]
 
 [21-05-03 10:35:57]
