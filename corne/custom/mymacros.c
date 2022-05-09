@@ -235,11 +235,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 tap_code16(LCTL(LGUI(KC_DOWN)));
             return false;
             break;
-        case WM_FILL:
-            if (record->event.pressed)
-                tap_code16(LCTL(LGUI(KC_HOME)));
-            return false;
-            break;
         case WM_FILL_H:
             if (record->event.pressed)
                 tap_code16(LCTL(LGUI(KC_PGDN)));
