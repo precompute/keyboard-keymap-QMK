@@ -315,10 +315,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            WM_WSPC_P,
                            WM_WSPC_N,
                            WM_TILE_C,
-                           KC_NO,
-                           KC_NO,
-                           KC_NO,
-                           KC_NO,
+                           WM_W_INC,
+                           WM_S_INC,
+                           WM_N_INC,
+                           WM_E_INC,
                            KC_NO,
                            KC_NO,
 
@@ -328,19 +328,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            WM_MAX_H,
                            WM_MAX_V,
                            WM_MIN,
+                           WM_W_DEC,
+                           WM_S_DEC,
+                           WM_N_DEC,
+                           WM_E_DEC,
+                           KC_NO,
+                           KC_NO,
+
                            WM_FILL_V,
                            WM_FILL_H,
                            KC_NO,
                            KC_NO,
                            KC_NO,
-                           KC_NO,
-
-                           KC_TRNS,
-                           KC_TRNS,
-                           KC_TRNS,
-                           KC_TRNS,
-                           KC_TRNS,
-                           KC_TRNS
+                           KC_NO
                            ),
 /* ** QWERTY+arrows */
   [7] = LAYOUT_split_3x6_3(KC_TAB,

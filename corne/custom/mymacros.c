@@ -250,6 +250,46 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 tap_code16(LCTL(LGUI(KC_END)));
             return false;
             break;
+        case WM_W_INC:
+            if (record->event.pressed)
+                tap_code16(LCTL(LGUI(KC_P)));
+            return false;
+            break;
+        case WM_S_INC:
+            if (record->event.pressed)
+                tap_code16(LCTL(LGUI(KC_W)));
+            return false;
+            break;
+        case WM_N_INC:
+            if (record->event.pressed)
+                tap_code16(LCTL(LGUI(KC_F)));
+            return false;
+            break;
+        case WM_E_INC:
+            if (record->event.pressed)
+                tap_code16(LCTL(LGUI(KC_Q)));
+            return false;
+            break;
+        case WM_W_DEC:
+            if (record->event.pressed)
+                tap_code16(LCTL(LGUI(KC_T)));
+            return false;
+            break;
+        case WM_S_DEC:
+            if (record->event.pressed)
+                tap_code16(LCTL(LGUI(KC_R)));
+            return false;
+            break;
+        case WM_N_DEC:
+            if (record->event.pressed)
+                tap_code16(LCTL(LGUI(KC_S)));
+            return false;
+            break;
+        case WM_E_DEC:
+            if (record->event.pressed)
+                tap_code16(LCTL(LGUI(KC_A)));
+            return false;
+            break;
 /* ** Super-Tab */
 /* adapted from */
 /* https://beta.docs.qmk.fm/using-qmk/advanced-keycodes/feature_macros#super-alt-tab */
