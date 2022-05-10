@@ -252,42 +252,42 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
         case WM_W_INC:
             if (record->event.pressed)
-                tap_code16(LCTL(RGUI(KC_P)));
+                tap_code16(LCTL(LSFT(LGUI(KC_P))));
             return false;
             break;
         case WM_S_INC:
             if (record->event.pressed)
-                tap_code16(LCTL(RGUI(KC_W)));
+                tap_code16(LCTL(LSFT(LGUI(KC_W))));
             return false;
             break;
         case WM_N_INC:
             if (record->event.pressed)
-                tap_code16(LCTL(RGUI(KC_F)));
+                tap_code16(LCTL(LSFT(LGUI(KC_F))));
             return false;
             break;
         case WM_E_INC:
             if (record->event.pressed)
-                tap_code16(LCTL(RGUI(KC_Q)));
+                tap_code16(LCTL(LSFT(LGUI(KC_Q))));
             return false;
             break;
         case WM_W_DEC:
             if (record->event.pressed)
-                tap_code16(LCTL(RGUI(KC_T)));
+                tap_code16(LCTL(LSFT(LGUI(KC_T))));
             return false;
             break;
         case WM_S_DEC:
             if (record->event.pressed)
-                tap_code16(LCTL(RGUI(KC_R)));
+                tap_code16(LCTL(LSFT(LGUI(KC_R))));
             return false;
             break;
         case WM_N_DEC:
             if (record->event.pressed)
-                tap_code16(LCTL(RGUI(KC_S)));
+                tap_code16(LCTL(LSFT(LGUI(KC_S))));
             return false;
             break;
         case WM_E_DEC:
             if (record->event.pressed)
-                tap_code16(LCTL(RGUI(KC_A)));
+                tap_code16(LCTL(LSFT(LGUI(KC_A))));
             return false;
             break;
 /* ** Super-Tab */
