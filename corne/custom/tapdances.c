@@ -153,6 +153,10 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 [EMACS_COMMENT] = TAP_DANCE_SSSS(SS_LGUI("gcc"), SS_LGUI("gc"), 120),
 /* *** toggle fold / global unfold all */
 [EMACS_FOLDING_T_ALL] = TAP_DANCE_SSSS(SS_LCTL("cft"), SS_LCTL("cfs"), 120),
+/* *** capture */
+[EMACS_CAPTURE_PDF_C] = TAP_DANCE_SSSS(SS_LCTL("t")"P", SS_LCTL("t")"p", 120),
+[EMACS_CAPTURE_CODE_C] = TAP_DANCE_SSSS(SS_LCTL("t")"C", SS_LCTL("t")"c", 120),
+[EMACS_CAPTURE_EPUB_C] = TAP_DANCE_SSSS(SS_LCTL("t")"E", SS_LCTL("t")"e", 120),
 /* ** Other Shortcuts */
 /* *** Menu Terminal */
 [MENU_TERM] = TAP_DANCE_KCSS(KC_APP, SS_LSFT(SS_LCTL("z")), 120),

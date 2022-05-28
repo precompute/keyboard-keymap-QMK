@@ -41,6 +41,9 @@ EMACS_NMODE_CG,
 EMACS_COMSKIP_IMENU,
 EMACS_COMMENT,
 EMACS_FOLDING_T_ALL,
+EMACS_CAPTURE_PDF_C,
+EMACS_CAPTURE_CODE_C,
+EMACS_CAPTURE_EPUB_C,
 };
 
 // Declare the functions to be used with your tap dance key(s)

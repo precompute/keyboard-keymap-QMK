@@ -303,9 +303,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            WM_MV_WSPC_N,
                            WM_MAX,
                            TD(GRASP_CAP_NOTE),
-                           KC_NO,
-                           KC_NO,
-                           KC_NO,
+                           TD(EMACS_CAPTURE_PDF_C),
+                           TD(EMACS_CAPTURE_CODE_C),
+                           TD(EMACS_CAPTURE_EPUB_C),
                            KC_NO,
                            KC_NO,
 
