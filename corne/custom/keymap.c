@@ -34,7 +34,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                          LGUI_T(KC_QUOT),
 
                          KC_DEL,
-                         KC_Z,
+                         LALT_T(KC_Z),
                          KC_X,
                          KC_C,
                          KC_D,
