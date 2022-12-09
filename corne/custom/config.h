@@ -14,10 +14,10 @@
 
 #define USE_SERIAL_PD2
 #define ONESHOT_TAP_TOGGLE 2 /* 3 */
-#define ONESHOT_TIMEOUT 6000
+#define ONESHOT_TIMEOUT 5000
 /* Don't need these, copied them from another config. */
 /* #define TAPPING_FORCE_HOLD */
-#define TAPPING_TERM 150
+#define TAPPING_TERM 120
 #define IGNORE_MOD_TAP_INTERRUPT
 
 #define MOUSEKEY_INTERVAL 20
