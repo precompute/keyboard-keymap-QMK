@@ -290,6 +290,129 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 tap_code16(LCTL(LSFT(LGUI(KC_A))));
             return false;
             break;
+/* ** Grid */
+        case WM_TILE_01:
+            if (record->event.pressed)
+                tap_code16(LCTL(LSFT(LGUI(LALT(KC_Q)))));
+            return false;
+            break;
+        case WM_TILE_02:
+            if (record->event.pressed)
+                tap_code16(LCTL(LSFT(LGUI(LALT(KC_W)))));
+            return false;
+            break;
+        case WM_TILE_03:
+            if (record->event.pressed)
+                tap_code16(LCTL(LSFT(LGUI(LALT(KC_F)))));
+            return false;
+            break;
+        case WM_TILE_04:
+            if (record->event.pressed)
+                tap_code16(LCTL(LSFT(LGUI(LALT(KC_P)))));
+            return false;
+            break;
+        case WM_TILE_05:
+            if (record->event.pressed)
+                tap_code16(LCTL(LSFT(LGUI(LALT(KC_B)))));
+            return false;
+            break;
+        case WM_TILE_06:
+            if (record->event.pressed)
+                tap_code16(LCTL(LSFT(LGUI(LALT(KC_J)))));
+            return false;
+            break;
+        case WM_TILE_07:
+            if (record->event.pressed)
+                tap_code16(LCTL(LSFT(LGUI(LALT(KC_A)))));
+            return false;
+            break;
+        case WM_TILE_08:
+            if (record->event.pressed)
+                tap_code16(LCTL(LSFT(LGUI(LALT(KC_R)))));
+            return false;
+            break;
+        case WM_TILE_09:
+            if (record->event.pressed)
+                tap_code16(LCTL(LSFT(LGUI(LALT(KC_S)))));
+            return false;
+            break;
+        case WM_TILE_10:
+            if (record->event.pressed)
+                tap_code16(LCTL(LSFT(LGUI(LALT(KC_T)))));
+            return false;
+            break;
+        case WM_TILE_11:
+            if (record->event.pressed)
+                tap_code16(LCTL(LSFT(LGUI(LALT(KC_G)))));
+            return false;
+            break;
+        case WM_TILE_12:
+            if (record->event.pressed)
+                tap_code16(LCTL(LSFT(LGUI(LALT(KC_M)))));
+            return false;
+            break;
+        case WM_TILE_13:
+            if (record->event.pressed)
+                tap_code16(LCTL(LSFT(LGUI(LALT(KC_Z)))));
+            return false;
+            break;
+        case WM_TILE_14:
+            if (record->event.pressed)
+                tap_code16(LCTL(LSFT(LGUI(LALT(KC_X)))));
+            return false;
+            break;
+        case WM_TILE_15:
+            if (record->event.pressed)
+                tap_code16(LCTL(LSFT(LGUI(LALT(KC_C)))));
+            return false;
+            break;
+        case WM_TILE_16:
+            if (record->event.pressed)
+                tap_code16(LCTL(LSFT(LGUI(LALT(KC_D)))));
+            return false;
+            break;
+        case WM_TILE_17:
+            if (record->event.pressed)
+                tap_code16(LCTL(LSFT(LGUI(LALT(KC_V)))));
+            return false;
+            break;
+        case WM_TILE_18:
+            if (record->event.pressed)
+                tap_code16(LCTL(LSFT(LGUI(LALT(KC_K)))));
+            return false;
+            break;
+
+        case WM_TILE_GROW_L:
+            if (record->event.pressed)
+                tap_code16(LCTL(LSFT(LGUI(LALT(KC_L)))));
+            return false;
+            break;
+        case WM_TILE_GROW_D:
+            if (record->event.pressed)
+                tap_code16(LCTL(LSFT(LGUI(LALT(KC_Y)))));
+            return false;
+            break;
+        case WM_TILE_GROW_U:
+            if (record->event.pressed)
+                tap_code16(LCTL(LSFT(LGUI(LALT(KC_U)))));
+            return false;
+            break;
+        case WM_TILE_GROW_R:
+            if (record->event.pressed)
+                tap_code16(LCTL(LSFT(LGUI(LALT(KC_SCLN)))));
+            return false;
+            break;
+        case RGUI_TAB_QUICK:
+            if (record->event.pressed)
+                tap_code16(RGUI(KC_TAB));
+            return false;
+            break;
+        case RGUI_TAB_R_QUICK:
+            if (record->event.pressed)
+                tap_code16(LSFT(RGUI(KC_TAB)));
+            return false;
+            break;
+
 /* ** Super-Tab */
 /* adapted from */
 /* https://beta.docs.qmk.fm/using-qmk/advanced-keycodes/feature_macros#super-alt-tab */
@@ -305,14 +428,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 unregister_code(KC_TAB);
             }
             break;
-    }
-    return true;
+        }
+        return true;
 };
 
 /* ** Super-Tab matrix scan */
 void matrix_scan_user(void) {
     if (is_rgui_tab_active) {
-        if (timer_elapsed(rgui_tab_timer) > 400) {
+        if (timer_elapsed(rgui_tab_timer) > 350) {
             unregister_code(KC_RGUI);
             is_rgui_tab_active = false;
         }
