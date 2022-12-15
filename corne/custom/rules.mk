@@ -21,6 +21,7 @@ TAP_DANCE_ENABLE = yes
 # SPLIT_TRANSPORT = mirror # for when Split Mirroring drops, it will maintain mirroring functionality
 UNICODEMAP_ENABLE = yes    # Unicode
 DYNAMIC_MACRO_ENABLE = yes # Dynamic Macros, recording, playback
+COMBO_ENABLE = yes # combos, press two keys together to emit another key
 
 # ** Disabled
 AUDIO_ENABLE = no      # Audio output on port C6

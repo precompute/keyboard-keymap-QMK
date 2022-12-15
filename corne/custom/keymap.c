@@ -2,6 +2,7 @@
 #include "mymacros.h"
 #include "tapdances.h"
 #include "myunicode.h"
+#include "mycombos.h"
 
 /* * Keymap */
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
