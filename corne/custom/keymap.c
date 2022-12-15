@@ -199,7 +199,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_TRNS
                            ),
 /* ** RESET */
-  [4] = LAYOUT_split_3x6_3(RESET,
+  [4] = LAYOUT_split_3x6_3(QK_BOOT, //RESET
                            DF(1),
                            DF(0),
                            DF(7),
@@ -210,7 +210,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_NO,
                            KC_NO,
                            KC_NO,
-                           RESET,
+                           QK_BOOT,
 
                            KC_CAPS,
                            KC_NO,

@@ -62,8 +62,12 @@ My custom keymap, personal default.
 |       6 | window manager shortcuts       |
 |       7 | qwerty + arrows (multimedia)   |
 |       8 | vim 2                          |
+|       9 | unicode + dynamic macros       |
+|      10 | window manager grid            |
 
 [21-09-18] Two new layers named in README, not fully documented.
+
+[22-12-15] Two more layers, very late on the documentation.  I haven't used the graphic below for about a year, so I might not update it.
 
 [22-05-09] Four new macros, not in the graphic.
 [[./images/custom.png]]
