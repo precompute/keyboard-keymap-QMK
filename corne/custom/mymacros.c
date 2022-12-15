@@ -1,4 +1,3 @@
-/* -*- eval: (outshine-mode 1); -*- */
 #include QMK_KEYBOARD_H
 #include "mymacros.h"
 

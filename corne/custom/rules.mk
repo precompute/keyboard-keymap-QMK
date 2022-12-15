@@ -1,4 +1,3 @@
-# -*- eval: (outshine-mode 1); -*-s
 # * Defaults
 # MCU = atmega32u4
 # BOOTLOADER = caterina
