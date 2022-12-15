@@ -438,7 +438,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_TRNS
                            ),
 
-/* ** Unicode */
+/* ** Unicode and Dynamic Macros*/
   [9] = LAYOUT_split_3x6_3(KC_NO,
                            KC_NO,
                            KC_NO,
@@ -478,12 +478,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_NO,
                            KC_NO,
 
+                           DYN_MACRO_PLAY1,
+                           DYN_MACRO_PLAY2,
+                           DYN_REC_STOP,
                            KC_TRNS,
-                           KC_TRNS,
-                           KC_TRNS,
-                           KC_TRNS,
-                           KC_TRNS,
-                           KC_TRNS
+                           DYN_REC_START1,
+                           DYN_REC_START2
                            ),
 /* ** WM grid */
   [10] = LAYOUT_split_3x6_3(WM_TILE_01,
