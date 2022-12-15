@@ -44,6 +44,9 @@ EMACS_FOLDING_T_ALL,
 EMACS_CAPTURE_PDF_C,
 EMACS_CAPTURE_CODE_C,
 EMACS_CAPTURE_EPUB_C,
+
+DYNMACRO_START_STOP_1,
+DYNMACRO_START_STOP_2,
 };
 
 // Declare the functions to be used with your tap dance key(s)
