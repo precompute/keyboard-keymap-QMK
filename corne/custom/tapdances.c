@@ -55,7 +55,7 @@ void ql_reset(qk_tap_dance_state_t *state, void *user_data) {
 /* ** Send String + Send String */
 void td_ssss_f(qk_tap_dance_state_t *state, void* user_data) {
   td_ssss *data = (td_ssss*)user_data;
-  if (state->pressed) {
+  if (state->pressed && timer_elapsed(state->timer) > data->mytime) {
     const char *mystr2 = data->mystring2;
     send_string(mystr2);
   } else {
@@ -71,7 +71,7 @@ void td_ssss_r(qk_tap_dance_state_t *state, void* user_data) {
 /* ** Keycode + Send String */
 void td_kcss_f(qk_tap_dance_state_t *state, void* user_data) {
   td_kcss *data = (td_kcss*)user_data;
-  if (state->pressed) {
+  if (state->pressed && timer_elapsed(state->timer) > data->mytime) {
     const char *mystr = data->mystring;
     send_string(mystr);
   } else {
@@ -101,7 +101,7 @@ void td_kcss_r(qk_tap_dance_state_t *state, void* user_data) {
 /* ** Keycode + Keycode */
 void td_kckc_f(qk_tap_dance_state_t *state, void* user_data) {
   td_kckc *data = (td_kckc*)user_data;
-  if (state->pressed) {
+  if (state->pressed && timer_elapsed(state->timer) > data->mytime) {
     tap_code16(data->keycode2);
   } else {
     tap_code16(data->keycode1);
@@ -163,8 +163,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 /* Adapted from sevanteri QMK config */
 /* https://github.com/sevanteri/qmk_firmware/blob/7d59eeff4ddbc09758412ed74ad22a0062312388/users/sevanteri/tap_dance_config.c */
 /* [SFT_END_SENT] = TAP_DANCE_SSKC(".  ", KC_LSFT, 120), */
-/* [SFT_END_SENT] = ACTION_TAP_DANCE_FN_ADVANCED_TIME(NULL, ql_finished, ql_reset, 120), */
-[SFT_END_SENT] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, ql_finished, ql_reset),
+[SFT_END_SENT] = ACTION_TAP_DANCE_FN_ADVANCED_TIME(NULL, ql_finished, ql_reset, 120),
 /* *** Volume */
 [VOLD_3X] = TAP_DANCE_SSSS(SS_TAP(X_VOLD), SS_TAP(X_VOLD)SS_TAP(X_VOLD)SS_TAP(X_VOLD), 120),
 [VOLU_3X] = TAP_DANCE_SSSS(SS_TAP(X_VOLU), SS_TAP(X_VOLU)SS_TAP(X_VOLU)SS_TAP(X_VOLU), 120),
