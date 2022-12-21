@@ -3,6 +3,8 @@
 #include "tapdances.h"
 #include "myunicode.h"
 
+const uint16_t PROGMEM test_combo[] = {KC_DOT, KC_COMM, COMBO_END};
+combo_t key_combos[COMBO_COUNT] = {COMBO(test_combo, KC_ESC)};
 /* * Keymap */
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* ** Colemak-DH */

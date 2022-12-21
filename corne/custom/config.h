@@ -44,3 +44,5 @@
 /* #define MK_W_INTERVAL_UNMOD 20 */
 
 #define UNICODE_SELECTED_MODES UC_LNX
+
+#define COMBO_COUNT 1
