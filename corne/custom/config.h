@@ -46,5 +46,5 @@
 
 #define UNICODE_SELECTED_MODES UC_LNX
 
-#define COMBO_COUNT 1
-#define COMBO_TERM 30
+#define COMBO_COUNT 3
+#define COMBO_TERM 20
