@@ -337,8 +337,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                            WM_FILL_V,
                            WM_FILL_H,
-                           KC_NO,
-                           KC_NO,
+                           ORG_QUOTE_BLOCK,
+                           ORG_SRC_BLOCK,
                            MO(10),
                            KC_NO
                            ),

@@ -411,6 +411,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 tap_code16(LSFT(RGUI(KC_TAB)));
             return false;
             break;
+/* ** Snippets */
+        case ORG_SRC_BLOCK:
+            if (record->event.pressed)
+                SEND_STRING("#+BEGIN_SRC"SS_TAP(X_ENT)SS_TAP(X_ENT)"#+END_SRC"SS_TAP(X_UP));
+            return false;
+            break;
+        case ORG_QUOTE_BLOCK:
+            if (record->event.pressed)
+                SEND_STRING("#+BEGIN_QUOTE"SS_TAP(X_ENT)SS_TAP(X_ENT)"#+END_QUOTE"SS_TAP(X_UP));
+            return false;
+            break;
 
 /* ** Super-Tab */
 /* adapted from */
