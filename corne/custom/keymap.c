@@ -200,7 +200,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_TRNS
                            ),
 /* ** RESET */
-  [4] = LAYOUT_split_3x6_3(RESET,
+  [4] = LAYOUT_split_3x6_3(QK_BOOT,
                            DF(1),
                            DF(0),
                            DF(7),
@@ -211,7 +211,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_NO,
                            KC_NO,
                            KC_NO,
-                           RESET,
+                           QK_BOOT,
 
                            KC_CAPS,
                            KC_NO,
@@ -478,12 +478,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_NO,
                            KC_NO,
 
-                           DYN_REC_START2,
-                           DYN_MACRO_PLAY2,
-                           DYN_REC_STOP,
+                           /* QK_DYNAMIC_MACRO_RECORD_START_2, */
+                           /* QK_DYNAMIC_MACRO_PLAY_2, */
+                           /* QK_DYNAMIC_MACRO_RECORD_STOP, */
                            KC_TRNS,
-                           DYN_MACRO_PLAY1,
-                           DYN_REC_START1
+                           KC_TRNS,
+                           KC_TRNS,
+                           KC_TRNS,
+                           /* QK_DYNAMIC_MACRO_PLAY_1, */
+                           /* QK_DYNAMIC_MACRO_RECORD_START_1 */
+                           KC_TRNS,
+                           KC_TRNS
                            ),
 /* ** WM grid */
   [10] = LAYOUT_split_3x6_3(WM_TILE_01,

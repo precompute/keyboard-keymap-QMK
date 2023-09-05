@@ -3,9 +3,9 @@
 
 /* * State and Reset */
 // Determine the current tap dance state
-td_state_t cur_dance(qk_tap_dance_state_t *state) {
+td_state_t cur_dance(tap_dance_state_t *state) {
   if (state->count == 1) {
-    if (!state->pressed) return TD_SINGLE_TAP;
+    if (state->interrupted | !state->pressed) return TD_SINGLE_TAP;
     else return TD_SINGLE_HOLD;
   }
   else return TD_NONE;
@@ -17,7 +17,7 @@ static td_tap_t ql_tap_state = {
 .state = TD_NONE
 };
 
-void ql_finished(qk_tap_dance_state_t *state, void *user_data) {
+void ql_finished(tap_dance_state_t *state, void *user_data) {
   ql_tap_state.state = cur_dance(state);
   switch (ql_tap_state.state) {
     case TD_SINGLE_TAP:
@@ -32,7 +32,7 @@ void ql_finished(qk_tap_dance_state_t *state, void *user_data) {
   }
 }
 
-void ql_reset(qk_tap_dance_state_t *state, void *user_data) {
+void ql_reset(tap_dance_state_t *state, void *user_data) {
   switch (ql_tap_state.state) {
     /* case TD_SINGLE_TAP: */
     /*   unregister_code(KC_X); */
@@ -48,14 +48,14 @@ void ql_reset(qk_tap_dance_state_t *state, void *user_data) {
   ql_tap_state.state = TD_NONE;
 }
 
-/* void ql_reset(qk_tap_dance_state_t *state, void *user_data) { */
+/* void ql_reset(tap_dance_state_t *state, void *user_data) { */
 /*   ql_tap_state.state = TD_NONE; */
 /* } */
 
 /* ** Send String + Send String */
-void td_ssss_f(qk_tap_dance_state_t *state, void* user_data) {
+void td_ssss_f(tap_dance_state_t *state, void* user_data) {
   td_ssss *data = (td_ssss*)user_data;
-  if (state->pressed && timer_elapsed(state->timer) > data->mytime) {
+  if (state->pressed) {
     const char *mystr2 = data->mystring2;
     send_string(mystr2);
   } else {
@@ -64,14 +64,14 @@ void td_ssss_f(qk_tap_dance_state_t *state, void* user_data) {
   }
 }
 
-void td_ssss_r(qk_tap_dance_state_t *state, void* user_data) {
+void td_ssss_r(tap_dance_state_t *state, void* user_data) {
   ql_tap_state.state = TD_NONE;
 }
 
 /* ** Keycode + Send String */
-void td_kcss_f(qk_tap_dance_state_t *state, void* user_data) {
+void td_kcss_f(tap_dance_state_t *state, void* user_data) {
   td_kcss *data = (td_kcss*)user_data;
-  if (state->pressed && timer_elapsed(state->timer) > data->mytime) {
+  if (state->pressed) {
     const char *mystr = data->mystring;
     send_string(mystr);
   } else {
@@ -79,12 +79,12 @@ void td_kcss_f(qk_tap_dance_state_t *state, void* user_data) {
   }
 }
 
-void td_kcss_r(qk_tap_dance_state_t *state, void* user_data) {
+void td_kcss_r(tap_dance_state_t *state, void* user_data) {
   ql_tap_state.state = TD_NONE;
 }
 
 /* /\* ** Send String + Keycode *\/ */
-/* void td_sskc_f(qk_tap_dance_state_t *state, void* user_data) { */
+/* void td_sskc_f(tap_dance_state_t *state, void* user_data) { */
 /*   td_sskc *data = (td_sskc*)user_data; */
 /*   if (state->pressed && timer_elapsed(state->timer) > data->mytime) { */
 /*     tap_code16(data->keycode); */
@@ -94,21 +94,21 @@ void td_kcss_r(qk_tap_dance_state_t *state, void* user_data) {
 /*   } */
 /* } */
 
-/* void td_sskc_r(qk_tap_dance_state_t *state, void* user_data) { */
+/* void td_sskc_r(tap_dance_state_t *state, void* user_data) { */
 /*   ql_tap_state.state = TD_NONE; */
 /* } */
 
 /* ** Keycode + Keycode */
-void td_kckc_f(qk_tap_dance_state_t *state, void* user_data) {
+void td_kckc_f(tap_dance_state_t *state, void* user_data) {
   td_kckc *data = (td_kckc*)user_data;
-  if (state->pressed && timer_elapsed(state->timer) > data->mytime) {
+  if (state->pressed) {
     tap_code16(data->keycode2);
   } else {
     tap_code16(data->keycode1);
   }
 }
 
-void td_kckc_r(qk_tap_dance_state_t *state, void* user_data) {
+void td_kckc_r(tap_dance_state_t *state, void* user_data) {
   ql_tap_state.state = TD_NONE;
 }
 
@@ -116,7 +116,7 @@ void td_kckc_r(qk_tap_dance_state_t *state, void* user_data) {
 
 /* * TD Enum */
 // Associate our tap dance key with its functionality
-qk_tap_dance_action_t tap_dance_actions[] = {
+tap_dance_action_t tap_dance_actions[] = {
 /* ** General */
 /* *** LPRN  ) -> */
 [LPRN_ARROW] = TAP_DANCE_KCSS(KC_LPRN, "<-", 120),
@@ -163,7 +163,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 /* Adapted from sevanteri QMK config */
 /* https://github.com/sevanteri/qmk_firmware/blob/7d59eeff4ddbc09758412ed74ad22a0062312388/users/sevanteri/tap_dance_config.c */
 /* [SFT_END_SENT] = TAP_DANCE_SSKC(".  ", KC_LSFT, 120), */
-[SFT_END_SENT] = ACTION_TAP_DANCE_FN_ADVANCED_TIME(NULL, ql_finished, ql_reset, 120),
+[SFT_END_SENT] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, ql_finished, ql_reset),
 /* *** Volume */
 [VOLD_3X] = TAP_DANCE_SSSS(SS_TAP(X_VOLD), SS_TAP(X_VOLD)SS_TAP(X_VOLD)SS_TAP(X_VOLD), 120),
 [VOLU_3X] = TAP_DANCE_SSSS(SS_TAP(X_VOLU), SS_TAP(X_VOLU)SS_TAP(X_VOLU)SS_TAP(X_VOLU), 120),

@@ -18,7 +18,6 @@
 /* Don't need these, copied them from another config. */
 /* #define TAPPING_FORCE_HOLD */
 #define TAPPING_TERM 120
-#define IGNORE_MOD_TAP_INTERRUPT
 
 #define MOUSEKEY_INTERVAL 18
 #define MOUSEKEY_DELAY 8
@@ -44,7 +43,7 @@
 /* #define MK_C_OFFSET_UNMOD 20 */
 /* #define MK_W_INTERVAL_UNMOD 20 */
 
-#define UNICODE_SELECTED_MODES UC_LNX
+/* #define UNICODE_SELECTED_MODES UNICODE_MODE_LINUX */
 
 #define COMBO_COUNT 3
 #define COMBO_TERM 20
