@@ -17,7 +17,8 @@ static td_tap_t ql_tap_state = {
 .state = TD_NONE
 };
 
-void ql_finished(tap_dance_state_t *state, void *user_data) {
+/* ** End Sentence + Capitalize */
+void sft_end_ql_finished(tap_dance_state_t *state, void *user_data) {
   ql_tap_state.state = cur_dance(state);
   switch (ql_tap_state.state) {
     case TD_SINGLE_TAP:
@@ -32,7 +33,7 @@ void ql_finished(tap_dance_state_t *state, void *user_data) {
   }
 }
 
-void ql_reset(tap_dance_state_t *state, void *user_data) {
+void sft_end_ql_reset(tap_dance_state_t *state, void *user_data) {
   switch (ql_tap_state.state) {
     /* case TD_SINGLE_TAP: */
     /*   unregister_code(KC_X); */
@@ -163,7 +164,7 @@ tap_dance_action_t tap_dance_actions[] = {
 /* Adapted from sevanteri QMK config */
 /* https://github.com/sevanteri/qmk_firmware/blob/7d59eeff4ddbc09758412ed74ad22a0062312388/users/sevanteri/tap_dance_config.c */
 /* [SFT_END_SENT] = TAP_DANCE_SSKC(".  ", KC_LSFT, 120), */
-[SFT_END_SENT] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, ql_finished, ql_reset),
+[SFT_END_SENT] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, sft_end_ql_finished, sft_end_ql_reset),
 /* *** Volume */
 [VOLD_3X] = TAP_DANCE_SSSS(SS_TAP(X_VOLD), SS_TAP(X_VOLD)SS_TAP(X_VOLD)SS_TAP(X_VOLD), 120),
 [VOLU_3X] = TAP_DANCE_SSSS(SS_TAP(X_VOLU), SS_TAP(X_VOLU)SS_TAP(X_VOLU)SS_TAP(X_VOLU), 120),
