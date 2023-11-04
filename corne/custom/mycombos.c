@@ -19,10 +19,10 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
     if (pressed) tap_code16(KC_ESC);
     break;
   case TAB_Q_LAUNCHER:
-    if (pressed) tap_code16(LCTL(LSFT(KC_X)));
+    if (pressed) tap_code16(LCTL(LSFT(LGUI(KC_X))));
     break;
   case Q_W_TERMINAL:
-    if (pressed) tap_code16(LCTL(LSFT(KC_Z)));
+    if (pressed) tap_code16(LCTL(LSFT(LGUI(KC_Z))));
     break;
   }
 }

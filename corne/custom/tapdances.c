@@ -169,6 +169,8 @@ tap_dance_action_t tap_dance_actions[] = {
 /* ** Other Shortcuts */
 /* *** Menu Terminal */
 [MENU_TERM] = TAP_DANCE_KCSS(KC_APP, SS_LSFT(SS_LCTL(SS_LGUI("z"))), 120),
+/* *** Emacsclient */
+[F6_EMACSCLIENT] = TAP_DANCE_KCSS(KC_F6, SS_LSFT(SS_LCTL(SS_LGUI("e"))), 120),
 /* *** Run1 */
 [F7_RUN1] = TAP_DANCE_KCSS(KC_F7, SS_LSFT(SS_LCTL(SS_LGUI("c"))), 120),
 /* *** Run2 */
