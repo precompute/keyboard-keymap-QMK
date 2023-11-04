@@ -17,6 +17,15 @@ static td_tap_t ql_tap_state = {
 .state = TD_NONE
 };
 
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+  switch (keycode) {
+  case SFT_END_SENT:
+    return 85; // reduce tapping term for SFT_END_SENT
+  default:
+    return TAPPING_TERM;
+  }
+}
+
 /* ** End Sentence + Capitalize */
 void sft_end_ql_finished(tap_dance_state_t *state, void *user_data) {
   ql_tap_state.state = cur_dance(state);

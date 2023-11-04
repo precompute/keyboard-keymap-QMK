@@ -17,7 +17,8 @@
 #define ONESHOT_TIMEOUT 5000
 /* Don't need these, copied them from another config. */
 /* #define TAPPING_FORCE_HOLD */
-#define TAPPING_TERM 80
+#define TAPPING_TERM 110
+#define TAPPING_TERM_PER_KEY
 
 #define MOUSEKEY_INTERVAL 18
 #define MOUSEKEY_DELAY 8
