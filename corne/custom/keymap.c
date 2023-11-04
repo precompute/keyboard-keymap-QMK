@@ -179,9 +179,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_WH_U,
 
                            TD(MENU_TERM), /* KC_APP, */
-                           KC_F7,
-                           KC_F8,
-                           KC_F9,
+                           TD(F7_RUN1),
+                           TD(F8_RUN2),
+                           TD(F9_XKILL),
                            KC_F11,
                            KC_F12,
                            KC_MS_L,

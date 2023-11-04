@@ -168,7 +168,13 @@ tap_dance_action_t tap_dance_actions[] = {
 [EMACS_CAPTURE_EPUB_C] = TAP_DANCE_SSSS(SS_LCTL("t")"E", SS_LCTL("t")"e", 120),
 /* ** Other Shortcuts */
 /* *** Menu Terminal */
-[MENU_TERM] = TAP_DANCE_KCSS(KC_APP, SS_LSFT(SS_LCTL("z")), 120),
+[MENU_TERM] = TAP_DANCE_KCSS(KC_APP, SS_LSFT(SS_LCTL(SS_LGUI("z"))), 120),
+/* *** Run1 */
+[F7_RUN1] = TAP_DANCE_KCSS(KC_F7, SS_LSFT(SS_LCTL(SS_LGUI("c"))), 120),
+/* *** Run2 */
+[F8_RUN2] = TAP_DANCE_KCSS(KC_F8, SS_LSFT(SS_LCTL(SS_LGUI("x"))), 120),
+/* *** Xkill */
+[F9_XKILL] = TAP_DANCE_KCSS(KC_F9, SS_LSFT(SS_LCTL(SS_LGUI("?"))), 120),
 /* *** Shift Sentence End */
 /* Adapted from sevanteri QMK config */
 /* https://github.com/sevanteri/qmk_firmware/blob/7d59eeff4ddbc09758412ed74ad22a0062312388/users/sevanteri/tap_dance_config.c */
