@@ -170,7 +170,7 @@ tap_dance_action_t tap_dance_actions[] = {
 /* *** Menu Terminal */
 [MENU_TERM] = TAP_DANCE_KCSS(KC_APP, SS_LSFT(SS_LCTL(SS_LGUI("z"))), TAPPING_TERM),
 /* *** Emacsclient */
-[F6_EMACSCLIENT] = TAP_DANCE_KCSS(KC_F6, SS_LSFT(SS_LCTL(SS_LGUI("e"))), TAPPING_TERM),
+[F4_EMACSCLIENT] = TAP_DANCE_KCSS(KC_F4, SS_LSFT(SS_LCTL(SS_LGUI("e"))), TAPPING_TERM),
 /* *** Run1 */
 [F7_RUN1] = TAP_DANCE_KCSS(KC_F7, SS_LSFT(SS_LCTL(SS_LGUI("c"))), TAPPING_TERM),
 /* *** Run2 */
