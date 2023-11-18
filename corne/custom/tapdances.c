@@ -20,7 +20,7 @@ static td_tap_t ql_tap_state = {
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
   case SFT_END_SENT:
-    return 85; // reduce tapping term for SFT_END_SENT
+    return 50; // reduce tapping term for SFT_END_SENT
   default:
     return TAPPING_TERM;
   }
@@ -168,23 +168,23 @@ tap_dance_action_t tap_dance_actions[] = {
 [EMACS_CAPTURE_EPUB_C] = TAP_DANCE_SSSS(SS_LCTL("t")"E", SS_LCTL("t")"e", TAPPING_TERM),
 /* ** Other Shortcuts */
 /* *** Menu Terminal */
-[MENU_TERM] = TAP_DANCE_KCSS(KC_APP, SS_LSFT(SS_LCTL(SS_LGUI("z"))), TAPPING_TERM),
+[MENU_TERM] = TAP_DANCE_KCSS(KC_APP, SS_LSFT(SS_LCTL(SS_LGUI("z"))), 90),
 /* *** Emacsclient */
-[F4_EMACSCLIENT] = TAP_DANCE_KCSS(KC_F4, SS_LSFT(SS_LCTL(SS_LGUI("e"))), TAPPING_TERM),
+[F4_EMACSCLIENT] = TAP_DANCE_KCSS(KC_F4, SS_LSFT(SS_LCTL(SS_LGUI("e"))), 90),
 /* *** Run1 */
-[F7_RUN1] = TAP_DANCE_KCSS(KC_F7, SS_LSFT(SS_LCTL(SS_LGUI("c"))), TAPPING_TERM),
+[F7_RUN1] = TAP_DANCE_KCSS(KC_F7, SS_LSFT(SS_LCTL(SS_LGUI("c"))), 90),
 /* *** Run2 */
-[F8_RUN2] = TAP_DANCE_KCSS(KC_F8, SS_LSFT(SS_LCTL(SS_LGUI("x"))), TAPPING_TERM),
+[F8_RUN2] = TAP_DANCE_KCSS(KC_F8, SS_LSFT(SS_LCTL(SS_LGUI("x"))), 90),
 /* *** Xkill */
-[F9_XKILL] = TAP_DANCE_KCSS(KC_F9, SS_LSFT(SS_LCTL(SS_LGUI("?"))), TAPPING_TERM),
+[F9_XKILL] = TAP_DANCE_KCSS(KC_F9, SS_LSFT(SS_LCTL(SS_LGUI("?"))), 90),
 /* *** Shift Sentence End */
 /* Adapted from sevanteri QMK config */
 /* https://github.com/sevanteri/qmk_firmware/blob/7d59eeff4ddbc09758412ed74ad22a0062312388/users/sevanteri/tap_dance_config.c */
 /* [SFT_END_SENT] = TAP_DANCE_SSKC(".  ", KC_LSFT, 120), */
 [SFT_END_SENT] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, sft_end_ql_finished, sft_end_ql_reset),
 /* *** Volume */
-[VOLD_3X] = TAP_DANCE_SSSS(SS_TAP(X_VOLD), SS_TAP(X_VOLD)SS_TAP(X_VOLD)SS_TAP(X_VOLD), TAPPING_TERM),
-[VOLU_3X] = TAP_DANCE_SSSS(SS_TAP(X_VOLU), SS_TAP(X_VOLU)SS_TAP(X_VOLU)SS_TAP(X_VOLU), TAPPING_TERM),
+[VOLD_3X] = TAP_DANCE_SSSS(SS_TAP(X_VOLD), SS_TAP(X_VOLD)SS_TAP(X_VOLD)SS_TAP(X_VOLD), 90),
+[VOLU_3X] = TAP_DANCE_SSSS(SS_TAP(X_VOLU), SS_TAP(X_VOLU)SS_TAP(X_VOLU)SS_TAP(X_VOLU), 90),
 /* /\* *** Dynamic Macro Start / Stop *\/ */
 /* [DYNMACRO_START_STOP_1] = TAP_DANCE_KCKC(DYN_REC_START1, DYN_REC_STOP, 120), */
 /* [DYNMACRO_START_STOP_2] = TAP_DANCE_KCKC(DYN_REC_START2, DYN_REC_STOP, 120), */
