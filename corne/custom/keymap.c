@@ -4,6 +4,9 @@
 #include "myunicode.h"
 #include "mycombos.h"
 
+#define X(n) UM(n)
+#define XP(n,m) UP(n,m)
+
 /* * Keymap */
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* ** Colemak-DH */
@@ -157,7 +160,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_F2,
                            KC_F3,
                            KC_F10,
-                           KC_BTN3,
+                           MS_BTN3,
                            KC_HOME,
                            KC_PGDN,
                            KC_PGUP,
@@ -169,14 +172,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            TD(F4_EMACSCLIENT),
                            KC_F5,
                            KC_F6,
-                           KC_BTN1,
-                           KC_BTN2,
+                           MS_BTN1,
+                           MS_BTN2,
                            KC_LEFT,
                            KC_DOWN,
                            KC_UP,
                            KC_RGHT,
-                           KC_WH_D,
-                           KC_WH_U,
+                           MS_WHLD,
+                           MS_WHLU,
 
                            TD(MENU_TERM), /* KC_APP, */
                            TD(F7_RUN1),
@@ -184,10 +187,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            TD(F9_XKILL),
                            KC_F11,
                            KC_F12,
-                           KC_MS_L,
-                           KC_MS_D,
-                           KC_MS_U,
-                           KC_MS_R,
+                           MS_LEFT,
+                           MS_DOWN,
+                           MS_UP,
+                           MS_RGHT,
                            TD(VOLD_3X),
                            MO(4),
 

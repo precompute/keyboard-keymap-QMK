@@ -7,12 +7,7 @@
 #   change to "no" to disable the options, or define them in the Makefile in
 #   the appropriate keymap folder that will get included automatically
 #
-SRC+= mymacros.c tapdances.c myunicode.c
-
-# https://github.com/qmk/qmk_firmware/issues/21137
-# This will auto-include the specified file in the introspection preamble so that it makes them available to the introspection functions.
-# If you're already specifying it in a SRC += <my_combos_file>.c elsewhere, then it'll need to be removed from the SRC line.
-INTROSPECTION_KEYMAP_C= mycombos.c
+SRC+= mymacros.c tapdances.c myunicode.c mycombos.c
 
 # ** Enabled
 CFLAGS += -flto

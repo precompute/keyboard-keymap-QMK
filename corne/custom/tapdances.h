@@ -51,7 +51,10 @@ EMACS_CAPTURE_EPUB_C,
 
 /* DYNMACRO_START_STOP_1, */
 /* DYNMACRO_START_STOP_2, */
+TAP_DANCE_COUNT
 };
+
+extern tap_dance_action_t tap_dance_actions[TAP_DANCE_COUNT];
 
 // Declare the functions to be used with your tap dance key(s)
 
