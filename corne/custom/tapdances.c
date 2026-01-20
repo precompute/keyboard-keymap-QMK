@@ -133,7 +133,7 @@ tap_dance_action_t tap_dance_actions[] = {
 /* *** RPRN  ( <- */
 [RPRN_ARROW] = TAP_DANCE_KCSS(KC_RPRN, "->", TAPPING_TERM),
 /* *** = =: */
-[EQL_EQLCOL] = TAP_DANCE_KCSS(KC_EQL, "=:", TAPPING_TERM),
+[EQL_EQLCOL] = TAP_DANCE_KCSS(KC_EQL, ":=", TAPPING_TERM),
 /* *** Grasp capture / note */
 [GRASP_CAP_NOTE] = TAP_DANCE_SSSS(SS_LCTL(SS_LALT("c")), SS_LCTL(SS_LALT("y")), TAPPING_TERM),
 /* ** Vim */

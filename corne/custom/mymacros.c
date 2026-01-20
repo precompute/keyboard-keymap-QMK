@@ -423,6 +423,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return false;
             break;
 
+/* ** Xmodmap */
+        case XMODMAPRESET:
+            if (record->event.pressed)
+                tap_code16(LSFT(LCTL(LGUI(KC_B))));
+            return false;
+            break;
+
 /* ** Super-Tab */
 /* adapted from */
 /* https://beta.docs.qmk.fm/using-qmk/advanced-keycodes/feature_macros#super-alt-tab */
