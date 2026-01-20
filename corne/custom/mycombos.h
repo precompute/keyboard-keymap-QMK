@@ -3,7 +3,7 @@
 
 enum combo_events {
 COMM_DOT_ESC,
-TAB_Q_LAUNCHER,
+TAB_Q_EMACS,
 Q_W_TERMINAL,
 };
 
