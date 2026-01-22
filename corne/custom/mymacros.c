@@ -9,22 +9,22 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 /* * Vim Window Movement */
         case VIMDOW_L:
             if (record->event.pressed)
-                SEND_STRING(SS_LCTL("wh"));
+                SEND_STRING(SS_LGUI(SS_LCTL("wh")));
             return false;
             break;
         case VIMDOW_D:
             if (record->event.pressed)
-                SEND_STRING(SS_LCTL("wj"));
+                SEND_STRING(SS_LGUI(SS_LCTL("wj")));
             return false;
             break;
         case VIMDOW_U:
             if (record->event.pressed)
-                SEND_STRING(SS_LCTL("wk"));
+                SEND_STRING(SS_LGUI(SS_LCTL("wk")));
             return false;
             break;
         case VIMDOW_R:
             if (record->event.pressed)
-                SEND_STRING(SS_LCTL("wl"));
+                SEND_STRING(SS_LGUI(SS_LCTL("wl")));
             return false;
             break;
 /* * Emacs Movement */
