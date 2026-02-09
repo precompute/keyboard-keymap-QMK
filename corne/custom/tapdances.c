@@ -147,25 +147,25 @@ tap_dance_action_t tap_dance_actions[] = {
 /* *** Split / Delete Other Windows */
 [VIMSPLIT_H_DEL_OTHER]   = TAP_DANCE_SSSS(SS_LCTL("ws"), SS_LGUI(SS_RGUI("'")), TAPPING_TERM),
 [VIMSPLIT_V_DEL_OTHER_V] = TAP_DANCE_SSSS(SS_LCTL("wv"), SS_LGUI(SS_RGUI("v")), TAPPING_TERM),
-/* ** Emacs */
-/* *** find file / find recent */
-[SPC_FF_FR] = TAP_DANCE_SSSS(" ff", " fr", TAPPING_TERM),
-/* *** search directory / search project */
-[SPC_SD_SP] = TAP_DANCE_SSSS(" sd", " sp", TAPPING_TERM),
-/* *** swiper search / isearch */
-[EMACS_SEARCH_ISEARCH] = TAP_DANCE_SSSS(SS_LCTL("ss"), SS_LCTL("s")"s", TAPPING_TERM),
-/* *** Normal Mode / C-g */
-[EMACS_NMODE_CG] = TAP_DANCE_SSSS(SS_TAP(X_ESC), SS_LCTL("g"), TAPPING_TERM),
-/* *** comment skip / imenu */
-[EMACS_COMSKIP_IMENU] = TAP_DANCE_SSSS(SS_LCTL(SS_LGUI("=")), SS_LGUI(" ")"si", TAPPING_TERM),
-/* *** comment line / selection */
-[EMACS_COMMENT] = TAP_DANCE_SSSS(SS_LGUI("gcc"), SS_LGUI("gc"), TAPPING_TERM),
-/* *** toggle fold / global unfold all */
-[EMACS_FOLDING_T_ALL] = TAP_DANCE_SSSS(SS_LCTL("cft"), SS_LCTL("cfs"), TAPPING_TERM),
-/* *** capture */
-[EMACS_CAPTURE_PDF_C] = TAP_DANCE_SSSS(SS_LCTL("t")"P", SS_LCTL("t")"p", TAPPING_TERM),
-[EMACS_CAPTURE_CODE_C] = TAP_DANCE_SSSS(SS_LCTL("t")"C", SS_LCTL("t")"c", TAPPING_TERM),
-[EMACS_CAPTURE_EPUB_C] = TAP_DANCE_SSSS(SS_LCTL("t")"E", SS_LCTL("t")"e", TAPPING_TERM),
+/* /\* ** Emacs *\/ */
+/* /\* *** find file / find recent *\/ */
+/* [SPC_FF_FR] = TAP_DANCE_SSSS(" ff", " fr", TAPPING_TERM), */
+/* /\* *** search directory / search project *\/ */
+/* [SPC_SD_SP] = TAP_DANCE_SSSS(" sd", " sp", TAPPING_TERM), */
+/* /\* *** swiper search / isearch *\/ */
+/* [EMACS_SEARCH_ISEARCH] = TAP_DANCE_SSSS(SS_LCTL("ss"), SS_LCTL("s")"s", TAPPING_TERM), */
+/* /\* *** Normal Mode / C-g *\/ */
+/* [EMACS_NMODE_CG] = TAP_DANCE_SSSS(SS_TAP(X_ESC), SS_LCTL("g"), TAPPING_TERM), */
+/* /\* *** comment skip / imenu *\/ */
+/* [EMACS_COMSKIP_IMENU] = TAP_DANCE_SSSS(SS_LCTL(SS_LGUI("=")), SS_LGUI(" ")"si", TAPPING_TERM), */
+/* /\* *** comment line / selection *\/ */
+/* [EMACS_COMMENT] = TAP_DANCE_SSSS(SS_LGUI("gcc"), SS_LGUI("gc"), TAPPING_TERM), */
+/* /\* *** toggle fold / global unfold all *\/ */
+/* [EMACS_FOLDING_T_ALL] = TAP_DANCE_SSSS(SS_LCTL("cft"), SS_LCTL("cfs"), TAPPING_TERM), */
+/* /\* *** capture *\/ */
+/* [EMACS_CAPTURE_PDF_C] = TAP_DANCE_SSSS(SS_LCTL("t")"P", SS_LCTL("t")"p", TAPPING_TERM), */
+/* [EMACS_CAPTURE_CODE_C] = TAP_DANCE_SSSS(SS_LCTL("t")"C", SS_LCTL("t")"c", TAPPING_TERM), */
+/* [EMACS_CAPTURE_EPUB_C] = TAP_DANCE_SSSS(SS_LCTL("t")"E", SS_LCTL("t")"e", TAPPING_TERM), */
 /* ** Other Shortcuts */
 /* *** Menu Terminal */
 [MENU_TERM] = TAP_DANCE_KCSS(KC_APP, SS_LSFT(SS_LCTL(SS_LGUI("z"))), 90),

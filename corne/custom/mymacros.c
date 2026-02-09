@@ -28,31 +28,31 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return false;
             break;
 /* * Emacs Movement */
-        case EMACS_BW_B:
-            if (record->event.pressed)
-                SEND_STRING(SS_LGUI("B"));
-            return false;
-            break;
-        case EMACS_B_D:
-            if (record->event.pressed)
-                tap_code16(LCTL(RGUI(KC_J)));
-            return false;
-            break;
-        case EMACS_B_U:
-            if (record->event.pressed)
-                tap_code16(LCTL(RGUI(KC_K)));
-            return false;
-            break;
-        case EMACS_BW_F:
-            if (record->event.pressed)
-                SEND_STRING(SS_LGUI("W"));
-            return false;
-            break;
-        case EMACS_SEXP_P:
-            if (record->event.pressed)
-                tap_code16(LCTL(LALT(KC_B)));
-            return false;
-            break;
+        /* case EMACS_BW_B: */
+        /*     if (record->event.pressed) */
+        /*         SEND_STRING(SS_LGUI("B")); */
+        /*     return false; */
+        /*     break; */
+        /* case EMACS_B_D: */
+        /*     if (record->event.pressed) */
+        /*         tap_code16(LCTL(RGUI(KC_J))); */
+        /*     return false; */
+        /*     break; */
+        /* case EMACS_B_U: */
+        /*     if (record->event.pressed) */
+        /*         tap_code16(LCTL(RGUI(KC_K))); */
+        /*     return false; */
+        /*     break; */
+        /* case EMACS_BW_F: */
+        /*     if (record->event.pressed) */
+        /*         SEND_STRING(SS_LGUI("W")); */
+        /*     return false; */
+        /*     break; */
+        /* case EMACS_SEXP_P: */
+        /*     if (record->event.pressed) */
+        /*         tap_code16(LCTL(LALT(KC_B))); */
+        /*     return false; */
+        /*     break; */
         case EMACS_GIT_HUNK_N:
             if (record->event.pressed)
                 SEND_STRING(SS_LGUI(" ")"g]");
@@ -63,11 +63,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 SEND_STRING(SS_LGUI(" ")"g[");
             return false;
             break;
-        case EMACS_SEXP_N:
-            if (record->event.pressed)
-                tap_code16(LCTL(LALT(KC_F)));
-            return false;
-            break;
+        /* case EMACS_SEXP_N: */
+        /*     if (record->event.pressed) */
+        /*         tap_code16(LCTL(LALT(KC_F))); */
+        /*     return false; */
+        /*     break; */
         case EMACS_HEADING_P:
             if (record->event.pressed)
                 SEND_STRING(SS_LGUI("["));
@@ -78,31 +78,31 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 SEND_STRING(SS_LGUI("]"));
             return false;
             break;
-        case EMACS_DIRED_JUMP:
-            if (record->event.pressed)
-                SEND_STRING(SS_LGUI(" ")"oo");
-            return false;
-            break;
-        case EMACS_FDEFBEG_N:
-            if (record->event.pressed)
-                SEND_STRING(SS_RGUI("]")"m");
-            return false;
-            break;
-        case EMACS_FDEFBEG_P:
-            if (record->event.pressed)
-                SEND_STRING(SS_RGUI("[")"m");
-            return false;
-            break;
-        case EMACS_FDEFEND_N:
-            if (record->event.pressed)
-                SEND_STRING(SS_RGUI("]")"M");
-            return false;
-            break;
-        case EMACS_FDEFEND_P:
-            if (record->event.pressed)
-                SEND_STRING(SS_RGUI("[")"M");
-            return false;
-            break;
+        /* case EMACS_DIRED_JUMP: */
+        /*     if (record->event.pressed) */
+        /*         SEND_STRING(SS_LGUI(" ")"oo"); */
+        /*     return false; */
+        /*     break; */
+        /* case EMACS_FDEFBEG_N: */
+        /*     if (record->event.pressed) */
+        /*         SEND_STRING(SS_RGUI("]")"m"); */
+        /*     return false; */
+        /*     break; */
+        /* case EMACS_FDEFBEG_P: */
+        /*     if (record->event.pressed) */
+        /*         SEND_STRING(SS_RGUI("[")"m"); */
+        /*     return false; */
+        /*     break; */
+        /* case EMACS_FDEFEND_N: */
+        /*     if (record->event.pressed) */
+        /*         SEND_STRING(SS_RGUI("]")"M"); */
+        /*     return false; */
+        /*     break; */
+        /* case EMACS_FDEFEND_P: */
+        /*     if (record->event.pressed) */
+        /*         SEND_STRING(SS_RGUI("[")"M"); */
+        /*     return false; */
+        /*     break; */
         case EMACS_WIND_C:
             if (record->event.pressed)
                 SEND_STRING(SS_LGUI(" ")"!R");
@@ -121,24 +121,24 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return false;
             break;
 /* * Vim Misc */
-/* ** Edit */
-        case VIMEDIT:
-            if (record->event.pressed)
-                SEND_STRING(SS_TAP(X_ESC)":e ~/");
-            return false;
-            break;
+/* /\* ** Edit *\/ */
+/*         case VIMEDIT: */
+/*             if (record->event.pressed) */
+/*                 SEND_STRING(SS_TAP(X_ESC)":e ~/"); */
+/*             return false; */
+/*             break; */
 /* ** Exec */
-        case VIMEXEC:
-            if (record->event.pressed)
-                SEND_STRING(SS_LALT("!"));
-            return false;
-            break;
+/*         case VIMEXEC: */
+/*             if (record->event.pressed) */
+/*                 SEND_STRING(SS_LALT("!")); */
+/*             return false; */
+/*             break; */
 /* ** Visual */
-        case EMACS_VISUAL:
-            if (record->event.pressed)
-                SEND_STRING(SS_LGUI("V"));
-            return false;
-            break;
+        /* case EMACS_VISUAL: */
+        /*     if (record->event.pressed) */
+        /*         SEND_STRING(SS_LGUI("V")); */
+        /*     return false; */
+        /*     break; */
 /* ** Split */
             /* case VIMSPLIT_H: */
             /*     if (record->event.pressed) */
@@ -162,16 +162,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 tap_code16(LGUI(KC_DOWN));
             return false;
             break;
-        case WM_MAX_H:
-            if (record->event.pressed)
-                tap_code16(LGUI(KC_LEFT));
-            return false;
-            break;
-        case WM_MAX_V:
-            if (record->event.pressed)
-                tap_code16(LGUI(KC_RGHT));
-            return false;
-            break;
+        /* case WM_MAX_H: */
+        /*     if (record->event.pressed) */
+        /*         tap_code16(LGUI(KC_LEFT)); */
+        /*     return false; */
+        /*     break; */
+        /* case WM_MAX_V: */
+        /*     if (record->event.pressed) */
+        /*         tap_code16(LGUI(KC_RGHT)); */
+        /*     return false; */
+        /*     break; */
 /* ** Workspace */
         case WM_WSPC_N:
             if (record->event.pressed)
