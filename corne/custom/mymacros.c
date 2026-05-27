@@ -206,57 +206,57 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 /* ** Tiling */
         case WM_TILE_T:
             if (record->event.pressed)
-                tap_code16(LCTL(LGUI(RGUI(KC_U))));
+                tap_code16(LGUI(LCTL(RGUI(KC_U))));
             return false;
             break;
         case WM_TILE_B:
             if (record->event.pressed)
-                tap_code16(LCTL(LGUI(RGUI(KC_COMM))));
+                tap_code16(LGUI(LCTL(RGUI(KC_COMM))));
             return false;
             break;
         case WM_TILE_L:
             if (record->event.pressed)
-                tap_code16(LCTL(LGUI(RGUI(KC_N))));
+                tap_code16(LGUI(LCTL(RGUI(KC_N))));
             return false;
             break;
         case WM_TILE_R:
             if (record->event.pressed)
-                tap_code16(LCTL(LGUI(RGUI(KC_I))));
+                tap_code16(LGUI(LCTL(RGUI(KC_I))));
             return false;
             break;
         case WM_TILE_TL:
             if (record->event.pressed)
-                tap_code16(LCTL(LGUI(RGUI(KC_L))));
+                tap_code16(LGUI(LCTL(RGUI(KC_L))));
             return false;
             break;
         case WM_TILE_TR:
             if (record->event.pressed)
-                tap_code16(LCTL(LGUI(RGUI(KC_Y))));
+                tap_code16(LGUI(LCTL(RGUI(KC_Y))));
             return false;
             break;
         case WM_TILE_BL:
             if (record->event.pressed)
-                tap_code16(LCTL(LGUI(RGUI(KC_H))));
+                tap_code16(LGUI(LCTL(RGUI(KC_H))));
             return false;
             break;
         case WM_TILE_BR:
             if (record->event.pressed)
-                tap_code16(LCTL(LGUI(RGUI(KC_DOT))));
+                tap_code16(LGUI(LCTL(RGUI(KC_DOT))));
             return false;
             break;
         case WM_FILL_H:
             if (record->event.pressed)
-                tap_code16(LCTL(LGUI(RGUI(KC_SCLN))));
+                tap_code16(LGUI(LCTL(RGUI(KC_SCLN))));
             return false;
             break;
         case WM_FILL_V:
             if (record->event.pressed)
-                tap_code16(LCTL(LGUI(RGUI(KC_O))));
+                tap_code16(LGUI(LCTL(RGUI(KC_O))));
             return false;
             break;
         case WM_TILE_C:
             if (record->event.pressed)
-                tap_code16(LCTL(LGUI(RGUI(KC_E))));
+                tap_code16(LGUI(LCTL(RGUI(KC_E))));
             return false;
             break;
         /* case WM_W_INC: */
@@ -528,6 +528,175 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 tap_code16(LCTL(LGUI(RGUI(KC_K))));
             return false;
             break;
+
+        case WM_AUTOTILE_21:
+          if (record->event.pressed)
+            tap_code16(LCTL(LGUI(RGUI(KC_0))));
+          return false;
+          break;
+
+        case WM_AUTOTILE_12:
+          if (record->event.pressed)
+            tap_code16(LCTL(LGUI(RGUI(KC_1))));
+          return false;
+          break;
+
+        case WM_AUTOTILE_22:
+          if (record->event.pressed)
+            tap_code16(LCTL(LGUI(RGUI(KC_2))));
+          return false;
+          break;
+
+        case WM_AUTOTILE_31:
+          if (record->event.pressed)
+            tap_code16(LCTL(LGUI(RGUI(KC_3))));
+          return false;
+          break;
+
+        case WM_AUTOTILE_13:
+          if (record->event.pressed)
+            tap_code16(LCTL(LGUI(RGUI(KC_4))));
+          return false;
+          break;
+
+        case WM_AUTOTILE_32:
+          if (record->event.pressed)
+            tap_code16(LCTL(LGUI(RGUI(KC_5))));
+          return false;
+          break;
+
+        case WM_AUTOTILE_23:
+          if (record->event.pressed)
+            tap_code16(LCTL(LGUI(RGUI(KC_6))));
+          return false;
+          break;
+
+        case WM_AUTOTILE_33:
+          if (record->event.pressed)
+            tap_code16(LCTL(LGUI(RGUI(KC_7))));
+          return false;
+          break;
+
+        case WM_AUTOTILE_AUTO:
+          if (record->event.pressed)
+            tap_code16(LCTL(LGUI(RGUI(KC_8))));
+          return false;
+          break;
+
+        case WM_EXTEND_0:
+          if (record->event.pressed)
+            tap_code16(LCTL(LGUI(RGUI(KC_MINS))));
+          return false;
+          break;
+
+        case WM_EXTEND_1:
+          if (record->event.pressed)
+            tap_code16(LCTL(LGUI(RGUI(KC_EQL))));
+          return false;
+          break;
+
+        case WM_EXTEND_2:
+          if (record->event.pressed)
+            tap_code16(LCTL(LGUI(RGUI(KC_LBRC))));
+          return false;
+          break;
+
+        case WM_EXTEND_3:
+          if (record->event.pressed)
+            tap_code16(LCTL(LGUI(RGUI(KC_RBRC))));
+          return false;
+          break;
+
+        case WM_EXTEND_4:
+          if (record->event.pressed)
+            tap_code16(LCTL(LGUI(RGUI(KC_9))));
+          return false;
+          break;
+
+        case WM_SCALE_0:
+          if (record->event.pressed)
+            tap_code16(LCTL(LGUI(RGUI(KC_BSLS))));
+          return false;
+          break;
+
+        case WM_SCALE_1:
+          if (record->event.pressed)
+            tap_code16(LCTL(LGUI(RGUI(KC_QUOT))));
+          return false;
+          break;
+
+        case WM_SCALE_2:
+          if (record->event.pressed)
+            tap_code16(LCTL(LGUI(RGUI(KC_GRV))));
+          return false;
+          break;
+
+        case WM_SCALE_3:
+          if (record->event.pressed)
+            tap_code16(LCTL(LGUI(RGUI(KC_SLSH))));
+          return false;
+          break;
+
+        case WM_MOVE_0:
+          if (record->event.pressed)
+            tap_code16(LCTL(LGUI(RGUI(KC_RIGHT))));
+          return false;
+          break;
+
+        case WM_MOVE_1:
+          if (record->event.pressed)
+            tap_code16(LCTL(LGUI(RGUI(KC_LEFT))));
+          return false;
+          break;
+
+        case WM_MOVE_2:
+          if (record->event.pressed)
+            tap_code16(LCTL(LGUI(RGUI(KC_DOWN))));
+          return false;
+          break;
+
+        case WM_MOVE_3:
+          if (record->event.pressed)
+            tap_code16(LCTL(LGUI(RGUI(KC_UP))));
+          return false;
+          break;
+
+        case WM_SWAP_0:
+          if (record->event.pressed)
+            tap_code16(LCTL(LGUI(RGUI(KC_HOME))));
+          return false;
+          break;
+
+        case WM_SWAP_1:
+          if (record->event.pressed)
+            tap_code16(LCTL(LGUI(RGUI(KC_END))));
+          return false;
+          break;
+
+        case WM_SWAP_2:
+          if (record->event.pressed)
+            tap_code16(LCTL(LGUI(RGUI(KC_PGUP))));
+          return false;
+          break;
+
+        case WM_SWAP_3:
+          if (record->event.pressed)
+            tap_code16(LCTL(LGUI(RGUI(KC_PGDN))));
+          return false;
+          break;
+
+        case WM_UNDO:
+          if (record->event.pressed)
+            tap_code16(LCTL(LGUI(RGUI(KC_UNDO))));
+          return false;
+          break;
+
+        case WM_REDO:
+          if (record->event.pressed)
+            tap_code16(LCTL(LGUI(RGUI(KC_AGIN))));
+          return false;
+          break;
+
 /* ** Snippets */
         case ORG_SRC_BLOCK:
             if (record->event.pressed)

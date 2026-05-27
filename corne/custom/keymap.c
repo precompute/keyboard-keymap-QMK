@@ -20,7 +20,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                          KC_L,
                          KC_U,
                          KC_Y,
-                         LT(6, KC_SCLN),
+                         LT(5, KC_SCLN), // WM and misc
                          KC_ESC,
 
                          KC_ENT,
@@ -33,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                          KC_N,
                          KC_E,
                          KC_I,
-                         LT(5, KC_O),
+                         LT(4, KC_O), // VIM
                          LGUI_T(KC_QUOT),
 
                          KC_DEL,
@@ -41,74 +41,24 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                          KC_X,
                          KC_C,
                          KC_D,
-                         LT(5, KC_V),
-                         LT(9, KC_K),
+                         LT(4, KC_V), // VIM
+                         LT(7, KC_K), // Unicode
                          KC_H,
                          KC_COMM,
                          KC_DOT,
                          RGUI_T(KC_SLSH),
                          LALT_T(KC_MINS),
 
-
                          KC_BSPC,
-                         OSL(2),
+                         OSL(1), // Numbers and Symbols
                          KC_SPC,
                          OSM(MOD_LSFT),
                          OSM(MOD_LCTL),
-                         OSL(3)
-                           ),
-
-/* ** QWERTY */
-  [1] = LAYOUT_split_3x6_3(KC_TAB,
-                           KC_Q,
-                           KC_W,
-                           KC_E,
-                           KC_R,
-                           KC_T,
-                           KC_Y,
-                           KC_U,
-                           KC_I,
-                           LT(6, KC_O),
-                           KC_P,
-                           KC_ESC,
-
-                           KC_ENT,
-                           KC_A,
-                           KC_S,
-                           KC_D,
-                           LGUI_T(KC_F),
-                           KC_G,
-                           KC_H,
-                           KC_J,
-                           KC_K,
-                           KC_L,
-                           KC_SCLN,
-                           LGUI_T(KC_QUOT),
-
-                           KC_DEL,
-                           KC_Z,
-                           KC_X,
-                           KC_C,
-                           KC_V,
-                           KC_B,
-                           KC_N,
-                           KC_M,
-                           KC_COMM,
-                           KC_DOT,
-                           RGUI_T(KC_SLSH),
-                           LALT_T(KC_MINS),
-
-
-                           KC_BSPC,
-                           OSL(2),
-                           KC_SPC,
-                           OSM(MOD_LSFT),
-                           OSM(MOD_LCTL),
-                           OSL(3)
+                         OSL(2) // FN and misc
                            ),
 
 /* ** Numbers and Symbols */
-  [2] = LAYOUT_split_3x6_3(KC_TRNS,
+  [1] = LAYOUT_split_3x6_3(KC_TRNS,
                            KC_EXLM,
                            KC_AT,
                            KC_HASH,
@@ -134,7 +84,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_0,
                            KC_DOT,
 
-                           LT(4, KC_DEL),
+                           LT(3, KC_DEL), //RESET
                            KC_UNDS,
                            KC_LCBR,
                            KC_LBRC,
@@ -147,7 +97,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_TILD,
                            KC_GRV,
 
-                           MO(12),
+                           KC_TRNS,
                            KC_TRNS,
                            KC_TRNS,
                            KC_TRNS,
@@ -155,7 +105,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_TRNS
                            ),
 /* ** Fn and Misc */
-  [3] = LAYOUT_split_3x6_3(KC_PSCR,
+  [2] = LAYOUT_split_3x6_3(KC_PSCR,
                            KC_F1,
                            KC_F2,
                            KC_F3,
@@ -192,7 +142,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            MS_UP,
                            MS_RGHT,
                            TD(VOLD_3X),
-                           MO(4),
+                           MO(3), //RESET
 
                            KC_TRNS,
                            KC_LCTL,
@@ -203,10 +153,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_TRNS
                            ),
 /* ** RESET */
-  [4] = LAYOUT_split_3x6_3(QK_BOOT,
-                           DF(1),
-                           DF(0),
-                           DF(7),
+  [3] = LAYOUT_split_3x6_3(QK_BOOT,
+                           KC_NO,
+                           KC_NO,
+                           KC_NO,
                            KC_NO,
                            XMODMAPRESET,
                            KC_NO,
@@ -251,7 +201,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            ),
 
 /* ** Vim */
-  [5] = LAYOUT_split_3x6_3(TD(VIMSPLIT_H_DEL_OTHER),
+  [4] = LAYOUT_split_3x6_3(TD(VIMSPLIT_H_DEL_OTHER),
                            TD(VIMSPLIT_V_DEL_OTHER_V),
                            KC_NO,
                            KC_NO,
@@ -295,21 +245,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_TRNS, /* LGUI_T(KC_SPC), */
                            KC_TRNS,
                            KC_TRNS,
-                           MO(8)
+                           MO(6) // VIM 2
                            ),
 
 /* ** WM and Misc */
-  [6] = LAYOUT_split_3x6_3(WM_TILE_TL,
+  [5] = LAYOUT_split_3x6_3(WM_TILE_TL,
                            WM_TILE_T,
                            WM_TILE_TR,
                            WM_MV_WSPC_P,
                            WM_MV_WSPC_N,
                            WM_MAX,
-                           TD(GRASP_CAP_NOTE),
-                           KC_NO,
-                           KC_NO,
-                           KC_NO,
-                           KC_NO,
+                           WM_SWAP_0,
+                           WM_SWAP_1,
+                           WM_SWAP_2,
+                           WM_SWAP_3,
+                           KC_NO, // ;
                            KC_NO,
 
                            WM_TILE_L,
@@ -318,11 +268,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            WM_WSPC_P,
                            WM_WSPC_N,
                            WM_TILE_C,
-                           KC_NO,
-                           KC_NO,
-                           KC_NO,
-                           KC_NO,
-                           KC_NO,
+                           WM_EXTEND_0,
+                           WM_EXTEND_1,
+                           WM_EXTEND_2,
+                           WM_EXTEND_3,
+                           WM_EXTEND_4,
                            KC_NO,
 
                            WM_TILE_BL,
@@ -331,70 +281,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            RGUI_TAB_QUICK,
                            RGUI_TAB_R_QUICK,
                            WM_MIN,
-                           KC_NO,
-                           KC_NO,
-                           KC_NO,
-                           KC_NO,
+                           WM_SCALE_0,
+                           WM_SCALE_1,
+                           WM_SCALE_2,
+                           WM_SCALE_3,
                            KC_NO,
                            KC_NO,
 
                            WM_FILL_V,
                            WM_FILL_H,
-                           ORG_QUOTE_BLOCK,
-                           ORG_SRC_BLOCK,
-                           MO(10),
-                           KC_NO
-                           ),
-/* ** QWERTY+arrows */
-  [7] = LAYOUT_split_3x6_3(KC_TAB,
-                           KC_Q,
-                           KC_W,
-                           KC_E,
-                           KC_R,
-                           KC_T,
-                           KC_Y,
-                           KC_U,
-                           KC_UP,
-                           LT(6, KC_O),
-                           KC_P,
-                           KC_ESC,
-
-                           KC_ENT,
-                           KC_A,
-                           KC_S,
-                           KC_D,
-                           LGUI_T(KC_F),
-                           KC_G,
-                           KC_H,
-                           KC_LEFT,
-                           KC_DOWN,
-                           KC_RIGHT,
-                           KC_N,
-                           LGUI_T(KC_QUOT),
-
-                           KC_DEL,
-                           KC_Z,
-                           KC_X,
-                           KC_C,
-                           KC_V,
-                           KC_B,
-                           KC_N,
-                           KC_M,
-                           KC_COMM,
-                           KC_DOT,
-                           RGUI_T(KC_SLSH),
-                           LALT_T(KC_MINS),
-
-
-                           KC_BSPC,
-                           OSL(2),
-                           KC_SPC,
-                           OSM(MOD_LSFT),
-                           OSM(MOD_LCTL),
-                           DF(0)
+                           WM_UNDO,
+                           WM_REDO,
+                           MO(8), //WM Grid
+                           MO(8)  //WM Grid
                            ),
 /* ** VIM 2 */
-  [8] = LAYOUT_split_3x6_3(KC_NO,
+  [6] = LAYOUT_split_3x6_3(KC_NO,
                            KC_NO,
                            KC_NO,
                            KC_NO,
@@ -442,8 +344,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            ),
 
 /* ** Unicode and Dynamic Macros*/
-  [9] = LAYOUT_split_3x6_3(KC_NO,
-                           KC_NO,
+  [7] = LAYOUT_split_3x6_3(ORG_QUOTE_BLOCK,
                            KC_NO,
                            KC_NO,
                            KC_NO,
@@ -454,8 +355,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_NO,
                            KC_NO,
                            KC_NO,
-
                            KC_NO,
+
+                           ORG_SRC_BLOCK,
                            XP(AUMLAUT,AUMLAUTC),
                            KC_NO,
                            X(ESZETT),
@@ -468,12 +370,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            XP(OUMLAUT,OUMLAUTC),
                            KC_NO,
 
+                           TD(GRASP_CAP_NOTE),
                            KC_NO,
                            KC_NO,
                            KC_NO,
                            KC_NO,
-                           KC_NO,
-                           MO(11),//V
+                           MO(9), //V //emoji
                            KC_NO, //K
                            KC_NO,
                            KC_NO,
@@ -488,23 +390,24 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            KC_TRNS,
                            KC_TRNS,
                            KC_TRNS,
+                           KC_TRNS,
                            /* QK_DYNAMIC_MACRO_PLAY_1, */
                            /* QK_DYNAMIC_MACRO_RECORD_START_1 */
-                           KC_TRNS,
                            KC_TRNS
                            ),
+
 /* ** WM grid */
-  [10] = LAYOUT_split_3x6_3(WM_TILE_31_1,
+  [8] = LAYOUT_split_3x6_3(WM_TILE_31_1,
                             WM_TILE_32_11,
                             WM_TILE_32_22,
                             WM_TILE_33_11,
                             WM_TILE_33_21,
                             WM_TILE_33_31,
+                            WM_AUTOTILE_AUTO,
+                            WM_AUTOTILE_21,
+                            WM_AUTOTILE_31,
                             KC_NO,
-                            KC_NO,
-                            KC_NO,
-                            KC_NO,
-                            KC_NO,
+                            KC_NO, // ;
                             KC_NO,
 
                             WM_TILE_31_2,
@@ -513,11 +416,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                             WM_TILE_33_12,
                             WM_TILE_33_22,
                             WM_TILE_33_32,
+                            WM_AUTOTILE_12,
+                            WM_AUTOTILE_22,
+                            WM_AUTOTILE_32,
                             KC_NO,
-                            KC_NO,
-                            KC_NO,
-                            KC_NO,
-                            KC_NO,
+                            WM_MOVE_0,
                             KC_NO,
 
                             WM_TILE_31_3,
@@ -526,12 +429,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                             WM_TILE_33_13,
                             WM_TILE_33_23,
                             WM_TILE_33_33,
-                            KC_NO,
-                            KC_NO,
-                            KC_NO,
-                            KC_NO,
-                            KC_NO,
-                            KC_NO,
+                            WM_AUTOTILE_13,
+                            WM_AUTOTILE_23,
+                            WM_AUTOTILE_33,
+                            WM_MOVE_3,
+                            WM_MOVE_2,
+                            WM_MOVE_1,
 
                             RGUI_TAB_QUICK,
                             RGUI_TAB_R_QUICK,
@@ -541,7 +444,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                             KC_TRNS
                             ),
 /* ** Emoji*/
-  [11] = LAYOUT_split_3x6_3(X(EMOJI00),
+  [9] = LAYOUT_split_3x6_3(X(EMOJI00),
                             X(EMOJI01),
                             X(EMOJI02),
                             X(EMOJI03),
@@ -586,52 +489,5 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                             X(EMOJI37),
                             X(EMOJI38),
                             X(EMOJI39)
-                            ),
-/* ** Numpad*/
-  [12] = LAYOUT_split_3x6_3(KC_KP_DOT,
-                            KC_KP_7,
-                            KC_KP_8,
-                            KC_KP_9,
-                            KC_KP_SLASH,
-                            KC_KP_PLUS,
-                            KC_NO,
-                            KC_NO,
-                            KC_NO,
-                            KC_NO,
-                            KC_NO,
-                            KC_NO,
-
-                            KC_KP_ENTER,
-                            KC_KP_4,
-                            KC_KP_5,
-                            KC_KP_6,
-                            KC_KP_ASTERISK,
-                            KC_KP_COMMA,
-                            KC_NO,
-                            KC_NO,
-                            KC_NO,
-                            KC_NO,
-                            KC_NO,
-                            KC_NO,
-
-                            KC_KP_0,
-                            KC_KP_1,
-                            KC_KP_2,
-                            KC_KP_3,
-                            KC_KP_MINUS,
-                            KC_KP_EQUAL,
-                            KC_NO,
-                            KC_NO,
-                            KC_NO,
-                            KC_NO,
-                            KC_NO,
-                            KC_NO,
-
-                            KC_TRNS,
-                            KC_TRNS,
-                            KC_NUM, //I might need space on the layer
-                            KC_TRNS,
-                            KC_TRNS,
-                            KC_TRNS
-                            ),
+                            )
 };
