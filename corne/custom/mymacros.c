@@ -639,37 +639,37 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
         case WM_MOVE_0:
           if (record->event.pressed)
-            tap_code16(LCTL(LGUI(RGUI(KC_RIGHT))));
+            tap_code16(LCTL(LGUI(RGUI(KC_F1))));
           return false;
           break;
 
         case WM_MOVE_1:
           if (record->event.pressed)
-            tap_code16(LCTL(LGUI(RGUI(KC_LEFT))));
+            tap_code16(LCTL(LGUI(RGUI(KC_F2))));
           return false;
           break;
 
         case WM_MOVE_2:
           if (record->event.pressed)
-            tap_code16(LCTL(LGUI(RGUI(KC_DOWN))));
+            tap_code16(LCTL(LGUI(RGUI(KC_F3))));
           return false;
           break;
 
         case WM_MOVE_3:
           if (record->event.pressed)
-            tap_code16(LCTL(LGUI(RGUI(KC_UP))));
+            tap_code16(LCTL(LGUI(RGUI(KC_F4))));
           return false;
           break;
 
         case WM_SWAP_0:
           if (record->event.pressed)
-            tap_code16(LCTL(LGUI(RGUI(KC_HOME))));
+            tap_code16(LCTL(LGUI(RGUI(KC_F5))));
           return false;
           break;
 
         case WM_SWAP_1:
           if (record->event.pressed)
-            tap_code16(LCTL(LGUI(RGUI(KC_END))));
+            tap_code16(LCTL(LGUI(RGUI(KC_F6))));
           return false;
           break;
 
