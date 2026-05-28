@@ -93,20 +93,20 @@ void td_kcss_r(tap_dance_state_t *state, void* user_data) {
   ql_tap_state.state = TD_NONE;
 }
 
-/* /\* ** Send String + Keycode *\/ */
-/* void td_sskc_f(tap_dance_state_t *state, void* user_data) { */
-/*   td_sskc *data = (td_sskc*)user_data; */
-/*   if (state->pressed && timer_elapsed(state->timer) > data->mytime) { */
-/*     tap_code16(data->keycode); */
-/*   } else { */
-/*     const char *mystr = data->mystring; */
-/*     send_string(mystr); */
-/*   } */
-/* } */
+/* ** Send String + Keycode */
+void td_sskc_f(tap_dance_state_t *state, void* user_data) {
+  td_sskc *data = (td_sskc*)user_data;
+  if (state->pressed) {
+    tap_code16(data->keycode);
+  } else {
+    const char *mystr = data->mystring;
+    send_string(mystr);
+  }
+}
 
-/* void td_sskc_r(tap_dance_state_t *state, void* user_data) { */
-/*   ql_tap_state.state = TD_NONE; */
-/* } */
+void td_sskc_r(tap_dance_state_t *state, void* user_data) {
+  ql_tap_state.state = TD_NONE;
+}
 
 /* ** Keycode + Keycode */
 void td_kckc_f(tap_dance_state_t *state, void* user_data) {
@@ -188,6 +188,11 @@ tap_dance_action_t tap_dance_actions[] = {
 /* /\* *** Dynamic Macro Start / Stop *\/ */
 /* [DYNMACRO_START_STOP_1] = TAP_DANCE_KCKC(DYN_REC_START1, DYN_REC_STOP, 120), */
 /* [DYNMACRO_START_STOP_2] = TAP_DANCE_KCKC(DYN_REC_START2, DYN_REC_STOP, 120), */
+/* *** WM */
+[WM_SCALE_3_CC_ROT] = TAP_DANCE_SSKC(SS_LCTL(SS_LGUI(SS_RGUI("/"))), LCTL(LGUI(RGUI(KC_F8))), 90),
+[WM_SCALE_2_FLIP] = TAP_DANCE_SSKC(SS_LCTL(SS_LGUI(SS_RGUI("`"))), LCTL(LGUI(RGUI(KC_F9))), 90),
+[WM_SCALE_0_FLOP] = TAP_DANCE_SSKC(SS_LCTL(SS_LGUI(SS_RGUI("\\"))), LCTL(LGUI(RGUI(KC_F10))), 90),
+[WM_SCALE_1_C_ROT] = TAP_DANCE_SSKC(SS_LCTL(SS_LGUI(SS_RGUI("'"))), LCTL(LGUI(RGUI(KC_F7))), 90)
 };
 
 /* * TODO */

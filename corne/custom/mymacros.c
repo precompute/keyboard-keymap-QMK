@@ -613,29 +613,29 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           return false;
           break;
 
-        case WM_SCALE_0:
-          if (record->event.pressed)
-            tap_code16(LCTL(LGUI(RGUI(KC_BSLS))));
-          return false;
-          break;
+        /* case WM_SCALE_0: */
+        /*   if (record->event.pressed) */
+        /*     tap_code16(LCTL(LGUI(RGUI(KC_BSLS)))); */
+        /*   return false; */
+        /*   break; */
 
-        case WM_SCALE_1:
-          if (record->event.pressed)
-            tap_code16(LCTL(LGUI(RGUI(KC_QUOT))));
-          return false;
-          break;
+        /* case WM_SCALE_1: */
+        /*   if (record->event.pressed) */
+        /*     tap_code16(LCTL(LGUI(RGUI(KC_QUOT)))); */
+        /*   return false; */
+        /*   break; */
 
-        case WM_SCALE_2:
-          if (record->event.pressed)
-            tap_code16(LCTL(LGUI(RGUI(KC_GRV))));
-          return false;
-          break;
+        /* case WM_SCALE_2: */
+        /*   if (record->event.pressed) */
+        /*     tap_code16(LCTL(LGUI(RGUI(KC_GRV)))); */
+        /*   return false; */
+        /*   break; */
 
-        case WM_SCALE_3:
-          if (record->event.pressed)
-            tap_code16(LCTL(LGUI(RGUI(KC_SLSH))));
-          return false;
-          break;
+        /* case WM_SCALE_3: */
+        /*   if (record->event.pressed) */
+        /*     tap_code16(LCTL(LGUI(RGUI(KC_SLSH)))); */
+        /*   return false; */
+        /*   break; */
 
         case WM_MOVE_0:
           if (record->event.pressed)
